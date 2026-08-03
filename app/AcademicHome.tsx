@@ -114,20 +114,12 @@ const copy = {
     ],
     serviceTitle: "学术服务",
     serviceIntro: "期刊审稿与会议程序委员会 / 审稿服务",
-    honorsTitle: "荣誉与奖励",
     services: [
       ["Journals", "ACM TOIS · ACM TKDD · Information Processing & Management · Computers & Education: Artificial Intelligence · FLLM"],
       ["Senior Program Committee", "CIKM 2026"],
       ["Program Committee", "AAAI 2025 / 2026 · WSDM 2026 · KDD 2024 / 2025 / 2026"],
       ["Conference Reviewer", "ACM MM 2024 / 2025 / 2026 · ICLR 2024 / 2025 · CIKM 2025"],
       ["Workshops", "DCAI Workshop at WWW 2024"],
-    ],
-    honors: [
-      ["2020", "电子科技大学优秀毕业论文（Top 1%）"],
-      ["2019", "第十五届“挑战杯”四川省大学生课外学术科技作品竞赛二等奖两项（团队负责人）"],
-      ["2018", "第十三届 Freescale 智能车竞赛四川赛区二等奖（团队负责人）"],
-      ["2017", "国家励志奖学金（Top 3%）"],
-      ["2017", "本科生一等奖学金（Top 10%）"],
     ],
     contact: "欢迎就相关研究与合作通过邮件联系。",
     updated: "Last updated: August 2026",
@@ -237,20 +229,12 @@ const copy = {
     ],
     serviceTitle: "Professional Service",
     serviceIntro: "Journal reviewing and conference program committee / reviewing service",
-    honorsTitle: "Honors & Awards",
     services: [
       ["Journals", "ACM TOIS · ACM TKDD · Information Processing & Management · Computers & Education: Artificial Intelligence · FLLM"],
       ["Senior Program Committee", "CIKM 2026"],
       ["Program Committee", "AAAI 2025 / 2026 · WSDM 2026 · KDD 2024 / 2025 / 2026"],
       ["Conference Reviewer", "ACM MM 2024 / 2025 / 2026 · ICLR 2024 / 2025 · CIKM 2025"],
       ["Workshops", "DCAI Workshop at WWW 2024"],
-    ],
-    honors: [
-      ["2020", "Outstanding Thesis Award, UESTC (Top 1%)"],
-      ["2019", "Two Second Prizes, 15th Challenge Cup, Sichuan Province (Team Leader)"],
-      ["2018", "Second Prize, 13th Freescale Smart Car Competition, Sichuan Province (Team Leader)"],
-      ["2017", "National Encouragement Scholarship (Top 3%)"],
-      ["2017", "First-Class Undergraduate Student Scholarship (Top 10%)"],
     ],
     contact: "I welcome conversations about related research and collaboration.",
     updated: "Last updated: August 2026",
@@ -457,13 +441,6 @@ export function AcademicHome({ locale }: { locale: Locale }) {
           <dl className="service-list">
             {t.services.map(([label, detail]) => <div key={label}><dt>{label}</dt><dd>{detail}</dd></div>)}
           </dl>
-
-          <div className="honors-block">
-            <SectionHeading icon="🎖" title={t.honorsTitle} />
-            <ul className="honors-list">
-              {t.honors.map(([year, honor]) => <li key={`${year}-${honor}`}><time>{year}</time><span>{honor}</span></li>)}
-            </ul>
-          </div>
         </section>
       </main>
 

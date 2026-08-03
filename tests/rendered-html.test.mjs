@@ -13,7 +13,7 @@ test("exports a complete Chinese single-page academic homepage", async () => {
   assert.match(html, /教育背景/);
   assert.match(html, /研究经历/);
   assert.match(html, /学术服务/);
-  assert.match(html, /荣誉与奖励/);
+  assert.doesNotMatch(html, /荣誉与奖励/);
   assert.match(html, /Under Review/);
   assert.match(html, /Published \/ Accepted/);
   assert.match(html, /Google Scholar/);
@@ -29,7 +29,7 @@ test("exports the matching complete English single-page homepage", async () => {
   assert.match(html, />Education</);
   assert.match(html, /Research Experience/);
   assert.match(html, /Professional Service/);
-  assert.match(html, /Honors &amp; Awards/);
+  assert.doesNotMatch(html, /Honors &amp; Awards/);
 });
 
 test("shows exactly one celebratory public news entry on each language page", async () => {

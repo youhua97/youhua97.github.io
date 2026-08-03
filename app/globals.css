@@ -227,12 +227,6 @@ main {
 .service-list > div { display: grid; grid-template-columns: 145px minmax(0, 1fr); gap: 25px; padding: 15px 0; border-bottom: 1px solid var(--line-soft); }
 .service-list dt { color: var(--ink); font-family: var(--serif); font-size: 17px; font-weight: 600; }
 .service-list dd { margin: 0; color: #596678; font-size: 13px; line-height: 1.7; }
-.honors-block { margin-top: 55px; }
-.honors-list { margin: 0; padding: 0; border-top: 1px solid var(--line); list-style: none; }
-.honors-list li { display: grid; grid-template-columns: 60px minmax(0, 1fr); gap: 20px; padding: 13px 0; border-bottom: 1px solid var(--line-soft); }
-.honors-list time { color: var(--blue); font-size: 12px; font-weight: 700; }
-.honors-list span { color: #4e5c6f; font-size: 13px; }
-
 footer { background: #223249; color: #dfe7f1; }
 .footer-inner { min-height: 150px; display: flex; align-items: center; justify-content: space-between; gap: 40px; padding-top: 34px; padding-bottom: 34px; }
 .footer-inner > div { display: flex; flex-direction: column; }
