@@ -33,7 +33,7 @@ const copy = {
     navAria: "页面导航",
     avatarAria: "YL 字母抽象头像（非真人照片）",
     newsTitle: "最新动态",
-    newsNote: "最新公开的录用与发表成果",
+    newsNote: "最新公开的录用成果",
     researchTitle: "研究方向",
     researchIntro: "我希望让 AI 不只是生成答案，也能参与建模、评估策略并支持可解释的真实决策。",
     researchAreas: [
@@ -160,7 +160,7 @@ const copy = {
     navAria: "Page navigation",
     avatarAria: "Abstract YL monogram avatar, not a real photograph",
     newsTitle: "News",
-    newsNote: "Latest public acceptances and publications",
+    newsNote: "Latest public acceptance",
     researchTitle: "Research",
     researchIntro: "I work toward AI systems that do more than generate answers: they formulate models, evaluate policies, and support interpretable real-world decisions.",
     researchAreas: [
@@ -273,24 +273,6 @@ const news = [
     venue: "ECCV",
     year: "2026",
     firstAuthor: "Nai-Xin Zhai",
-  },
-  {
-    lead: "Delighted to share!",
-    title: "Interpretable Knowledge Tracing via Explicit-Implicit Alignment",
-    status: "is now published in",
-    venue: "Knowledge-Based Systems",
-    year: "2026",
-    firstAuthor: "Ersheng Ni",
-    href: "https://doi.org/10.1016/j.knosys.2026.116071",
-  },
-  {
-    lead: "Excited to announce!",
-    title: "Bridging NIP and MLM: A Unified Meta-Learning Framework for Personalized Sequential Recommendation",
-    status: "is now published in",
-    venue: "ACM TKDD",
-    year: "2026",
-    firstAuthor: "Youhua Li",
-    href: "https://dl.acm.org/doi/10.1145/3786346",
   },
 ];
 

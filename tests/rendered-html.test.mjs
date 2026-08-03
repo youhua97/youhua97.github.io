@@ -32,16 +32,15 @@ test("exports the matching complete English single-page homepage", async () => {
   assert.match(html, /Honors &amp; Awards/);
 });
 
-test("shows exactly three celebratory public news entries on each language page", async () => {
+test("shows exactly one celebratory public news entry on each language page", async () => {
   for (const file of [root, english]) {
     const html = await readFile(file, "utf8");
     const newsMarkup = html.slice(html.indexOf('id="news"'), html.indexOf('id="research"'));
-    assert.equal((newsMarkup.match(/class="news-item"/g) ?? []).length, 3);
+    assert.equal((newsMarkup.match(/class="news-item"/g) ?? []).length, 1);
     assert.match(newsMarkup, /Aligning Human Sense: Calibrated Distributional Reward Learning/);
-    assert.match(newsMarkup, /Interpretable Knowledge Tracing via Explicit-Implicit Alignment/);
-    assert.match(newsMarkup, /Bridging NIP and MLM: A Unified Meta-Learning Framework/);
-    assert.equal((newsMarkup.match(/Congratulations, /g) ?? []).length, 3);
-    assert.equal((newsMarkup.match(/class="news-flourish"/g) ?? []).length, 3);
+    assert.match(newsMarkup, /Congratulations, <strong>Nai-Xin Zhai/);
+    assert.equal((newsMarkup.match(/Congratulations, /g) ?? []).length, 1);
+    assert.equal((newsMarkup.match(/class="news-flourish"/g) ?? []).length, 1);
   }
 });
 
@@ -56,8 +55,27 @@ test("keeps the two non-public CIKM submissions under review", async () => {
     assert.ok(autoBidding > reviewStart && autoBidding < publishedStart);
     assert.ok(clinSdt > reviewStart && clinSdt < publishedStart);
     const reviewMarkup = html.slice(reviewStart, publishedStart);
-    assert.equal((reviewMarkup.match(/class="paper-item"/g) ?? []).length, 15);
+    assert.equal((reviewMarkup.match(/class="paper-item"/g) ?? []).length, 21);
     assert.doesNotMatch(html, /CIKM 2026/);
+  }
+});
+
+test("includes the added AAAI 2027 and KBS submissions under review", async () => {
+  for (const file of [root, english]) {
+    const html = await readFile(file, "utf8");
+    const reviewStart = html.indexOf("<h3>Under Review</h3>");
+    const publishedStart = html.indexOf("<h3>Published / Accepted</h3>");
+    const reviewMarkup = html.slice(reviewStart, publishedStart);
+    for (const title of [
+      "TACT: A Framework for Zero-Shot Task-to-Capability Transfer",
+      "WitMem: Evidence-Witnessed Governance for Long-Term Agent Memory",
+      "From One Goal to Full-Call Success",
+      "EVE-Bench: Entropy-Guided Benchmarking",
+      "Adaptive Hypercomplex Embeddings for Efficient and Expressive Recommender Systems",
+      "SMKT-LLM: Semantic Mapping for Knowledge Tracing with Large Language Models",
+    ]) {
+      assert.match(reviewMarkup, new RegExp(title));
+    }
   }
 });
 
@@ -77,7 +95,7 @@ test("uses a non-photographic avatar and keeps all paper metadata in English", a
   assert.match(html, /ECCV/);
   assert.match(html, /Knowledge-Based Systems/);
   assert.match(html, /Operations Research \(Revise &amp; Resubmit\)/);
-  assert.equal((html.match(/class="paper-item"/g) ?? []).length, 31);
+  assert.equal((html.match(/class="paper-item"/g) ?? []).length, 37);
   assert.match(html, /香港城市大学商学院前院长、讲座教授/);
   assert.match(html, /香港大学副校长、中国工程院院士/);
 });
