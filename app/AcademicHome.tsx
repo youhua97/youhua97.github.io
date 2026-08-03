@@ -1,4 +1,4 @@
-import { publications, underReview, workingPapers, type Paper } from "./data";
+import { publications, underReview, type Paper } from "./data";
 
 type Locale = "zh" | "en";
 
@@ -14,11 +14,11 @@ const copy = {
     lang: "English",
     langHref: "/en/",
     nav: [
+      ["教育", "#education"],
       ["动态", "#news"],
       ["研究", "#research"],
       ["论文", "#publications"],
       ["经历", "#experience"],
-      ["学术服务", "#service"],
     ],
     nameCn: "李佑华",
     role: "香港城市大学 决策分析与运筹学博士生",
@@ -26,7 +26,7 @@ const copy = {
     bio: "我的研究聚焦于人工智能驱动的决策与运筹优化，并延伸至金融科技、量化金融、Web3、推荐系统、多模态学习、大语言模型与智能体。当前工作重点是把 LLM 的推理能力与可验证的优化结构结合，用于复杂运营与金融决策。",
     location: "中国香港",
     advisorLabel: "导师",
-    advisors: "Prof. Houmin Yan（香港城市大学）与 Prof. Zuojun (Max) Shen（香港大学）",
+    advisors: "Prof. Houmin Yan（香港城市大学商学院前院长、讲座教授）与 Prof. Zuojun (Max) Shen（香港大学副校长、中国工程院院士）",
     emailLabel: "邮箱",
     linksLabel: "链接",
     scholar: "Google Scholar",
@@ -45,22 +45,20 @@ const copy = {
     ],
     publicationsTitle: "论文",
     publicationsIntro: "以下论文信息全部使用英文，并完整列出题目、作者、状态、年份、研究主题及可用链接。",
-    working: "Working Papers",
     underReview: "Under Review",
     published: "Published / Accepted",
     papers: "papers",
     linkLabel: "Paper",
     contribution: "* Equal contribution. † Corresponding author.",
-    experienceTitle: "教育与研究经历",
+    experienceTitle: "研究经历",
     educationTitle: "教育背景",
-    researchExperienceTitle: "研究经历",
     advisorPrefix: "导师：",
     education: [
       {
         date: "2024.09 — 至今",
         title: "博士 · 决策分析与运筹学",
         place: "香港城市大学",
-        detail: "研究方向：AI 驱动的决策、运筹优化、金融科技与大语言模型。",
+        detail: "导师：Prof. Houmin Yan（香港城市大学商学院前院长、讲座教授）与 Prof. Zuojun (Max) Shen（香港大学副校长、中国工程院院士）。研究方向：AI 驱动的决策、运筹优化、金融科技与大语言模型。",
       },
       {
         date: "2021.09 — 2024.07",
@@ -80,7 +78,7 @@ const copy = {
         date: "2024.09 — 至今",
         title: "Researcher & Ph.D. Student",
         place: "AIFTHK / 香港城市大学",
-        advisors: "Prof. Houmin Yan；Prof. Zuojun (Max) Shen",
+        advisors: "Prof. Houmin Yan（香港城市大学商学院前院长、讲座教授）；Prof. Zuojun (Max) Shen（香港大学副校长、中国工程院院士）",
         detail: "供应链金融建模、LLM 增强的决策系统、电商 GEO 框架与金融量化研究。",
       },
       {
@@ -143,11 +141,11 @@ const copy = {
     lang: "中文",
     langHref: "/",
     nav: [
+      ["Education", "#education"],
       ["News", "#news"],
       ["Research", "#research"],
       ["Publications", "#publications"],
       ["Experience", "#experience"],
-      ["Service", "#service"],
     ],
     nameCn: "李佑华",
     role: "Ph.D. Student in Decision Analytics & Operations",
@@ -155,7 +153,7 @@ const copy = {
     bio: "My research focuses on AI-driven decision-making and operations optimization, with broader interests in FinTech, quantitative finance, Web3, recommender systems, multimodal learning, large language models, and agents. I am particularly interested in combining LLM reasoning with verifiable optimization structure for complex operational and financial decisions.",
     location: "Hong Kong, China",
     advisorLabel: "Advisors",
-    advisors: "Prof. Houmin Yan (CityU) and Prof. Zuojun (Max) Shen (HKU)",
+    advisors: "Prof. Houmin Yan (Former Dean, College of Business, CityU; Chair Professor) and Prof. Zuojun (Max) Shen (Vice-President, HKU; Member of the Chinese Academy of Engineering)",
     emailLabel: "Email",
     linksLabel: "Links",
     scholar: "Google Scholar",
@@ -173,23 +171,21 @@ const copy = {
       ["LLMs & Agents", "Inference-time scaling, reward steering, skill evaluation, prompt optimization, code generation, and agent recommendation."],
     ],
     publicationsTitle: "Publications",
-    publicationsIntro: "A complete list of current working papers, manuscripts under review, and published or accepted work, including authors, status, year, topic, and available links.",
-    working: "Working Papers",
+    publicationsIntro: "A complete list of manuscripts under review and published or accepted work, including authors, status, year, topic, and available links.",
     underReview: "Under Review",
     published: "Published / Accepted",
     papers: "papers",
     linkLabel: "Paper",
     contribution: "* Equal contribution. † Corresponding author.",
-    experienceTitle: "Education & Research Experience",
+    experienceTitle: "Research Experience",
     educationTitle: "Education",
-    researchExperienceTitle: "Research Experience",
     advisorPrefix: "Advisor(s): ",
     education: [
       {
         date: "Sep 2024 — Present",
         title: "Ph.D. in Decision Analytics & Operations",
         place: "City University of Hong Kong",
-        detail: "Research in AI-driven decision-making, operations optimization, FinTech, and large language models.",
+        detail: "Advisors: Prof. Houmin Yan (Former Dean, College of Business, CityU; Chair Professor) and Prof. Zuojun (Max) Shen (Vice-President, HKU; Member of the Chinese Academy of Engineering). Research in AI-driven decision-making, operations optimization, FinTech, and large language models.",
       },
       {
         date: "Sep 2021 — Jul 2024",
@@ -209,7 +205,7 @@ const copy = {
         date: "Sep 2024 — Present",
         title: "Researcher & Ph.D. Student",
         place: "AIFTHK / City University of Hong Kong",
-        advisors: "Prof. Houmin Yan; Prof. Zuojun (Max) Shen",
+        advisors: "Prof. Houmin Yan (Former Dean, College of Business, CityU; Chair Professor); Prof. Zuojun (Max) Shen (Vice-President, HKU; Member of the Chinese Academy of Engineering)",
         detail: "Supply-chain finance modeling, LLM-enhanced decision systems, e-commerce GEO frameworks, and quantitative finance.",
       },
       {
@@ -386,6 +382,18 @@ export function AcademicHome({ locale }: { locale: Locale }) {
           </div>
         </section>
 
+        <section className="content-section" id="education">
+          <SectionHeading icon="🎓" title={t.educationTitle} />
+          <div className="timeline education-timeline">
+            {t.education.map((item) => (
+              <article key={`${item.date}-${item.title}`}>
+                <time>{item.date}</time>
+                <div><h4>{item.title}</h4><p className="timeline-place">{item.place}</p><p>{item.detail}</p></div>
+              </article>
+            ))}
+          </div>
+        </section>
+
         <section className="content-section" id="news">
           <SectionHeading icon="🔥" title={t.newsTitle} note={t.newsNote} />
           <ol className="news-list">
@@ -417,7 +425,6 @@ export function AcademicHome({ locale }: { locale: Locale }) {
           <SectionHeading icon="📝" title={t.publicationsTitle} />
           <p className="section-intro">{t.publicationsIntro}</p>
 
-          <PaperGroup title={t.working} papers={workingPapers} linkLabel={t.linkLabel} />
           <PaperGroup title={t.underReview} papers={underReview} linkLabel={t.linkLabel} />
 
           <section className="paper-group published-group" aria-label={t.published}>
@@ -444,21 +451,7 @@ export function AcademicHome({ locale }: { locale: Locale }) {
 
         <section className="content-section" id="experience">
           <SectionHeading icon="📖" title={t.experienceTitle} />
-
-          <div className="resume-block">
-            <h3>{t.educationTitle}</h3>
-            <div className="timeline">
-              {t.education.map((item) => (
-                <article key={`${item.date}-${item.title}`}>
-                  <time>{item.date}</time>
-                  <div><h4>{item.title}</h4><p className="timeline-place">{item.place}</p><p>{item.detail}</p></div>
-                </article>
-              ))}
-            </div>
-          </div>
-
-          <div className="resume-block">
-            <h3>{t.researchExperienceTitle}</h3>
+          <div className="resume-block experience-only">
             <div className="timeline">
               {t.experience.map((item) => (
                 <article key={`${item.date}-${item.title}-${item.place}`}>

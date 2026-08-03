@@ -7,25 +7,6 @@ export type Paper = {
   tag?: string;
 };
 
-export const workingPapers: Paper[] = [
-  {
-    title:
-      "FastSlow-MCTS: Adaptive Fast-to-Slow Search for Automated Optimization Modeling",
-    authors: "Youhua Li, Yiqi Sun, Zuojun (Max) Shen, Houmin Yan",
-    venue: "Working Paper",
-    year: "2026",
-    tag: "LLM × Optimization",
-  },
-  {
-    title:
-      "LLM-Guided State Representation Learning for Online Assortment Optimization",
-    authors: "Youhua Li, et al.",
-    venue: "Working Paper",
-    year: "2026",
-    tag: "Online Optimization",
-  },
-];
-
 export const underReview: Paper[] = [
   {
     title:

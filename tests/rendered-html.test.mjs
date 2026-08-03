@@ -10,10 +10,10 @@ test("exports a complete Chinese single-page academic homepage", async () => {
   assert.match(html, /Youhua Li/);
   assert.match(html, /最新动态/);
   assert.match(html, /研究方向/);
-  assert.match(html, /教育与研究经历/);
+  assert.match(html, /教育背景/);
+  assert.match(html, /研究经历/);
   assert.match(html, /学术服务/);
   assert.match(html, /荣誉与奖励/);
-  assert.match(html, /Working Papers/);
   assert.match(html, /Under Review/);
   assert.match(html, /Published \/ Accepted/);
   assert.match(html, /Google Scholar/);
@@ -26,7 +26,8 @@ test("exports the matching complete English single-page homepage", async () => {
   assert.match(html, />News</);
   assert.match(html, />Research</);
   assert.match(html, />Publications</);
-  assert.match(html, /Education &amp; Research Experience/);
+  assert.match(html, />Education</);
+  assert.match(html, /Research Experience/);
   assert.match(html, /Professional Service/);
   assert.match(html, /Honors &amp; Awards/);
 });
@@ -41,6 +42,14 @@ test("shows exactly three compact news entries on each language page", async () 
   }
 });
 
+test("places education before news and removes working papers", async () => {
+  for (const file of [root, english]) {
+    const html = await readFile(file, "utf8");
+    assert.ok(html.indexOf('id="education"') < html.indexOf('id="news"'));
+    assert.doesNotMatch(html, /Working Papers|FastSlow-MCTS|Online Assortment Optimization/);
+  }
+});
+
 test("uses a non-photographic avatar and keeps all paper metadata in English", async () => {
   const html = await readFile(root, "utf8");
   assert.match(html, /YL 字母抽象头像（非真人照片）/);
@@ -49,5 +58,7 @@ test("uses a non-photographic avatar and keeps all paper metadata in English", a
   assert.match(html, /ECCV/);
   assert.match(html, /Knowledge-Based Systems/);
   assert.match(html, /Operations Research \(Revise &amp; Resubmit\)/);
-  assert.equal((html.match(/class="paper-item"/g) ?? []).length, 33);
+  assert.equal((html.match(/class="paper-item"/g) ?? []).length, 31);
+  assert.match(html, /香港城市大学商学院前院长、讲座教授/);
+  assert.match(html, /香港大学副校长、中国工程院院士/);
 });
