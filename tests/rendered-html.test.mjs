@@ -60,7 +60,7 @@ test("keeps the two non-public CIKM submissions under review", async () => {
   }
 });
 
-test("includes the added AAAI 2027 and KBS submissions under review", async () => {
+test("includes the added submissions without exposing their target venues", async () => {
   for (const file of [root, english]) {
     const html = await readFile(file, "utf8");
     const reviewStart = html.indexOf("<h3>Under Review</h3>");
@@ -76,6 +76,7 @@ test("includes the added AAAI 2027 and KBS submissions under review", async () =
     ]) {
       assert.match(reviewMarkup, new RegExp(title));
     }
+    assert.doesNotMatch(reviewMarkup, /AAAI 2027|Knowledge-Based Systems/);
   }
 });
 
