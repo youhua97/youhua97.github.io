@@ -9,6 +9,24 @@ export type Paper = {
 
 export const underReview: Paper[] = [
   {
+    title: "On the Role of Language Representations in Auto-Bidding: Findings and Implications",
+    authors:
+      "Guanyu Zhu, Jining Luan, Hanwen Du, Xinyu Fang, Sibo Xu, Ersheng Ni, Hongji Li, Jincheng Fang, Ronghao Chen, Huacan Wang, Xuanqi Lan, Yongxin Ni, Yiqi Sun, Youhua Li†",
+    venue: "Under Review",
+    year: "2026",
+    href: "https://arxiv.org/abs/2605.05833",
+    tag: "Auto-Bidding",
+  },
+  {
+    title:
+      "ClinSDT: LLM-Encoded Clinical Semantic Guidance for Sepsis Treatment via Decision Transformer",
+    authors:
+      "Yanyan Wu, Guanyu Zhu, Changbin Zhao, Jin Zhang, Dexu Yu, Tianmin Sun, Jining Luan, Chunxiao Li, Hanwen Du, Youhua Li†",
+    venue: "Under Review",
+    year: "2026",
+    tag: "Decision Intelligence",
+  },
+  {
     title:
       "LLM-Assisted Scheduling Policy Design and Refinement: Evidence Across Queueing Networks, Job-Shop Scheduling, and Ride-Hailing Dispatch",
     authors:
@@ -132,24 +150,6 @@ export const underReview: Paper[] = [
 ];
 
 export const publications: Paper[] = [
-  {
-    title: "On the Role of Language Representations in Auto-Bidding: Findings and Implications",
-    authors:
-      "Guanyu Zhu, Jining Luan, Hanwen Du, Xinyu Fang, Sibo Xu, Ersheng Ni, Hongji Li, Jincheng Fang, Ronghao Chen, Huacan Wang, Xuanqi Lan, Yongxin Ni, Yiqi Sun, Youhua Li†",
-    venue: "CIKM 2026",
-    year: "2026",
-    href: "https://arxiv.org/abs/2605.05833",
-    tag: "Auto-Bidding",
-  },
-  {
-    title:
-      "ClinSDT: LLM-Encoded Clinical Semantic Guidance for Sepsis Treatment via Decision Transformer",
-    authors:
-      "Yanyan Wu, Guanyu Zhu, Changbin Zhao, Jin Zhang, Dexu Yu, Tianmin Sun, Jining Luan, Chunxiao Li, Hanwen Du, Youhua Li†",
-    venue: "CIKM 2026",
-    year: "2026",
-    tag: "Decision Intelligence",
-  },
   {
     title:
       "Aligning Human Sense: Calibrated Distributional Reward Learning for Video Generation",

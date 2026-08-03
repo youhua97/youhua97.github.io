@@ -32,13 +32,32 @@ test("exports the matching complete English single-page homepage", async () => {
   assert.match(html, /Honors &amp; Awards/);
 });
 
-test("shows exactly three compact news entries on each language page", async () => {
+test("shows exactly three celebratory public news entries on each language page", async () => {
   for (const file of [root, english]) {
     const html = await readFile(file, "utf8");
-    assert.equal((html.match(/class="news-item"/g) ?? []).length, 3);
-    assert.match(html, /On the Role of Language Representations in Auto-Bidding/);
-    assert.match(html, /ClinSDT: LLM-Encoded Clinical Semantic Guidance/);
-    assert.match(html, /Aligning Human Sense: Calibrated Distributional Reward Learning/);
+    const newsMarkup = html.slice(html.indexOf('id="news"'), html.indexOf('id="research"'));
+    assert.equal((newsMarkup.match(/class="news-item"/g) ?? []).length, 3);
+    assert.match(newsMarkup, /Aligning Human Sense: Calibrated Distributional Reward Learning/);
+    assert.match(newsMarkup, /Interpretable Knowledge Tracing via Explicit-Implicit Alignment/);
+    assert.match(newsMarkup, /Bridging NIP and MLM: A Unified Meta-Learning Framework/);
+    assert.equal((newsMarkup.match(/Congratulations, /g) ?? []).length, 3);
+    assert.equal((newsMarkup.match(/class="news-flourish"/g) ?? []).length, 3);
+  }
+});
+
+test("keeps the two non-public CIKM submissions under review", async () => {
+  for (const file of [root, english]) {
+    const html = await readFile(file, "utf8");
+    const reviewStart = html.indexOf("<h3>Under Review</h3>");
+    const publishedStart = html.indexOf("<h3>Published / Accepted</h3>");
+    const autoBidding = html.indexOf("On the Role of Language Representations in Auto-Bidding");
+    const clinSdt = html.indexOf("ClinSDT: LLM-Encoded Clinical Semantic Guidance");
+    assert.ok(reviewStart >= 0 && publishedStart > reviewStart);
+    assert.ok(autoBidding > reviewStart && autoBidding < publishedStart);
+    assert.ok(clinSdt > reviewStart && clinSdt < publishedStart);
+    const reviewMarkup = html.slice(reviewStart, publishedStart);
+    assert.equal((reviewMarkup.match(/class="paper-item"/g) ?? []).length, 15);
+    assert.doesNotMatch(html, /CIKM 2026/);
   }
 });
 
