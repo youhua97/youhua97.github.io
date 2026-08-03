@@ -154,7 +154,7 @@ export const publications: Paper[] = [
   {
     title: "On the Role of Language Representations in Auto-Bidding: Findings and Implications",
     authors:
-      "Guanyu Zhu, Jining Luan, Hanwen Du, Xinyu Fang, Ersheng Ni, Hongji Li, Jinchen Fang, Ronghao Chen, Huacan Wang, Xuanqi Lan, Yiqi Sun, Youhua Li†",
+      "Guanyu Zhu, Jining Luan, Hanwen Du, Xinyu Fang, Sibo Xu, Ersheng Ni, Hongji Li, Jincheng Fang, Ronghao Chen, Huacan Wang, Xuanqi Lan, Yongxin Ni, Yiqi Sun, Youhua Li†",
     venue: "CIKM 2026",
     year: "2026",
     href: "https://arxiv.org/abs/2605.05833",
@@ -318,4 +318,3 @@ export const publications: Paper[] = [
     tag: "3D Vision",
   },
 ];
-

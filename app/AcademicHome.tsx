@@ -10,109 +10,283 @@ const profile = {
 
 const copy = {
   zh: {
-    lang: "EN",
+    pageLabel: "李佑华的学术主页",
+    lang: "English",
     langHref: "/en/",
-    nav: [["动态", "#news"], ["研究", "#research"], ["论文", "#publications"], ["经历", "#experience"]],
-    eyebrow: "Decision Analytics · Artificial Intelligence",
-    role: "香港城市大学 决策分析与运筹学博士生",
-    affiliation: "AIFTHK 研究员",
-    intro: "我的研究位于运筹优化、金融科技与人工智能的交叉地带，关注如何让大语言模型成为可靠的决策、建模与优化伙伴。",
-    now: "目前关注",
-    nowText: "LLM for Optimization · FinTech · Recommender Systems · AI Agents",
-    email: "邮件联系", scholar: "Google Scholar",
-    newsLabel: "LATEST UPDATES", newsTitle: "近期动态",
-    newsIntro: "近期录用与研究进展。论文标题及出版信息均保留英文。",
-    aboutLabel: "RESEARCH AGENDA",
-    aboutTitle: "让 AI 参与决策，而不只是生成答案。",
-    aboutBody: "我关注复杂运营环境中的智能决策：从排队网络、作业车间调度与网约车派单，到金融强化学习、Web3 交易与多模态推荐。核心问题是如何把 LLM 的推理能力与可验证的优化结构结合起来。",
-    researchTitle: "研究方向",
-    researchAreas: [
-      { index: "01", title: "AI × Operations", text: "LLM 辅助优化建模、调度策略设计、在线决策与强化学习。" },
-      { index: "02", title: "FinTech & Web3", text: "量化交易、金融决策接口、新闻驱动的 Web3 推荐与回测。" },
-      { index: "03", title: "Recommender Systems", text: "多模态、迁移学习、序列推荐、知识追踪与模型压缩。" },
-      { index: "04", title: "Reasoning & Agents", text: "推理时扩展、奖励引导、技能评测、代码生成与智能体推荐。" },
+    nav: [
+      ["动态", "#news"],
+      ["研究", "#research"],
+      ["论文", "#publications"],
+      ["经历", "#experience"],
+      ["学术服务", "#service"],
     ],
-    papersLabel: "RESEARCH OUTPUT", papersTitle: "论文与在研工作",
-    papersIntro: "在投状态依据最新简历整理；已录用论文均按英文题名、作者与出版场所展示。",
-    working: "Working Papers", review: "Under Review", accepted: "Published / Accepted",
-    openPaper: "View paper", showReview: "View all under-review papers", showArchive: "View full publication archive",
-    equal: "* Equal contribution. † Corresponding author.",
-    expLabel: "BACKGROUND", expTitle: "教育与研究经历", education: "教育背景", experience: "研究经历",
-    service: "学术服务", awards: "荣誉奖励", contactTitle: "欢迎交流合作",
-    contactText: "如果你也在研究 LLM、运筹优化、金融科技或推荐系统，欢迎通过邮件联系我。",
-    contactCta: "发送邮件", footer: "Built for research, collaboration, and open exchange.",
+    nameCn: "李佑华",
+    role: "香港城市大学 决策分析与运筹学博士生",
+    affiliation: "AIFTHK Researcher · City University of Hong Kong",
+    bio: "我的研究聚焦于人工智能驱动的决策与运筹优化，并延伸至金融科技、量化金融、Web3、推荐系统、多模态学习、大语言模型与智能体。当前工作重点是把 LLM 的推理能力与可验证的优化结构结合，用于复杂运营与金融决策。",
+    location: "中国香港",
+    advisorLabel: "导师",
+    advisors: "Prof. Houmin Yan（香港城市大学）与 Prof. Zuojun (Max) Shen（香港大学）",
+    emailLabel: "邮箱",
+    linksLabel: "链接",
+    scholar: "Google Scholar",
+    navAria: "页面导航",
+    avatarAria: "YL 字母抽象头像（非真人照片）",
+    newsTitle: "最新动态",
+    newsNote: "最近录用的三篇论文",
+    researchTitle: "研究方向",
+    researchIntro: "我希望让 AI 不只是生成答案，也能参与建模、评估策略并支持可解释的真实决策。",
+    researchAreas: [
+      ["AI for Operations", "LLM 辅助优化建模、调度策略设计、在线决策、排队网络与强化学习。"],
+      ["FinTech & Quantitative Finance", "供应链金融、金融强化学习、量化交易与智能金融决策接口。"],
+      ["Web3", "新闻驱动的资产推荐、效用建模与交易回测。"],
+      ["Recommender Systems", "多模态与序列推荐、迁移学习、知识追踪、蒸馏与模型压缩。"],
+      ["LLMs & Agents", "推理时扩展、奖励引导、能力评测、提示词优化、代码生成与智能体推荐。"],
+    ],
+    publicationsTitle: "论文",
+    publicationsIntro: "以下论文信息全部使用英文，并完整列出题目、作者、状态、年份、研究主题及可用链接。",
+    working: "Working Papers",
+    underReview: "Under Review",
+    published: "Published / Accepted",
+    papers: "papers",
+    linkLabel: "Paper",
+    contribution: "* Equal contribution. † Corresponding author.",
+    experienceTitle: "教育与研究经历",
+    educationTitle: "教育背景",
+    researchExperienceTitle: "研究经历",
+    advisorPrefix: "导师：",
+    education: [
+      {
+        date: "2024.09 — 至今",
+        title: "博士 · 决策分析与运筹学",
+        place: "香港城市大学",
+        detail: "研究方向：AI 驱动的决策、运筹优化、金融科技与大语言模型。",
+      },
+      {
+        date: "2021.09 — 2024.07",
+        title: "硕士 · 计算机科学与技术",
+        place: "上海科技大学 / 中国科学院计算技术研究所（联合培养）",
+        detail: "研究方向：推荐系统、迁移学习、多模态学习与数据挖掘。",
+      },
+      {
+        date: "2016.09 — 2020.07",
+        title: "本科 · 自动化工程",
+        place: "电子科技大学",
+        detail: "入选“立人班”（全校选拔 40 人）；本科研究方向为计算机视觉与三维重建。",
+      },
+    ],
+    experience: [
+      {
+        date: "2024.09 — 至今",
+        title: "Researcher & Ph.D. Student",
+        place: "AIFTHK / 香港城市大学",
+        advisors: "Prof. Houmin Yan；Prof. Zuojun (Max) Shen",
+        detail: "供应链金融建模、LLM 增强的决策系统、电商 GEO 框架与金融量化研究。",
+      },
+      {
+        date: "2023.05 — 2024.06",
+        title: "Research Assistant",
+        place: "中国科学技术大学管理学院",
+        advisors: "Prof. Chunxiao Li；Prof. Eric Zheng；Prof. Bin Gu",
+        detail: "大语言模型、行为金融与金融信息系统研究。",
+      },
+      {
+        date: "2023.07 — 2023.12",
+        title: "Research Assistant",
+        place: "香港中文大学商学院",
+        advisors: "Prof. Jing Wu",
+        detail: "LLMs 与智能体在运营管理和供应链中的应用。",
+      },
+      {
+        date: "2022.07 — 2023.03",
+        title: "Visiting Student",
+        place: "西湖大学 Representation Learning Lab",
+        advisors: "Prof. Fajie Yuan",
+        detail: "数据挖掘、迁移学习与多模态推荐。",
+      },
+      {
+        date: "2021.05 — 2022.03",
+        title: "Research Intern",
+        place: "上海脑科学与类脑研究中心",
+        advisors: "Prof. Yi Zhou",
+        detail: "NLP 常识推理，以及用于投资管理的知识图谱。",
+      },
+      {
+        date: "2018.09 — 2020.06",
+        title: "Undergraduate Researcher",
+        place: "电子科技大学 Pattern Recognition and Machine Intelligence Lab",
+        advisors: "Prof. Lu Yang",
+        detail: "三维重建、SLAM 与计算机视觉。",
+      },
+    ],
+    serviceTitle: "学术服务",
+    serviceIntro: "期刊审稿与会议程序委员会 / 审稿服务",
+    honorsTitle: "荣誉与奖励",
+    services: [
+      ["Journals", "ACM TOIS · ACM TKDD · Information Processing & Management · Computers & Education: Artificial Intelligence · FLLM"],
+      ["Conferences", "ACM MM 2024 / 2025 / 2026 · ICLR 2024 / 2025 · KDD 2024 / 2025 / 2026"],
+      ["Program Committee", "AAAI 2025 / 2026 · CIKM 2025 / 2026"],
+      ["Workshops", "DCAI Workshop at WWW 2024"],
+    ],
+    honors: [
+      ["2020", "电子科技大学优秀毕业论文（Top 1%）"],
+      ["2019", "第十五届“挑战杯”四川省大学生课外学术科技作品竞赛二等奖两项（团队负责人）"],
+      ["2018", "第十三届 Freescale 智能车竞赛四川赛区二等奖（团队负责人）"],
+      ["2017", "国家励志奖学金（Top 3%）"],
+      ["2017", "本科生一等奖学金（Top 10%）"],
+    ],
+    contact: "欢迎就相关研究与合作通过邮件联系。",
+    updated: "Last updated: August 2026",
   },
   en: {
-    lang: "中文", langHref: "/",
-    nav: [["News", "#news"], ["Research", "#research"], ["Publications", "#publications"], ["Experience", "#experience"]],
-    eyebrow: "Decision Analytics · Artificial Intelligence",
+    pageLabel: "Academic homepage of Youhua Li",
+    lang: "中文",
+    langHref: "/",
+    nav: [
+      ["News", "#news"],
+      ["Research", "#research"],
+      ["Publications", "#publications"],
+      ["Experience", "#experience"],
+      ["Service", "#service"],
+    ],
+    nameCn: "李佑华",
     role: "Ph.D. Student in Decision Analytics & Operations",
     affiliation: "Researcher at AIFTHK · City University of Hong Kong",
-    intro: "My research sits at the intersection of operations optimization, FinTech, and artificial intelligence, with a focus on making large language models reliable partners for decision-making, modeling, and optimization.",
-    now: "Current focus", nowText: "LLM for Optimization · FinTech · Recommender Systems · AI Agents",
-    email: "Email me", scholar: "Google Scholar",
-    newsLabel: "LATEST UPDATES", newsTitle: "News", newsIntro: "Recent acceptances and research updates.",
-    aboutLabel: "RESEARCH AGENDA", aboutTitle: "AI for decisions—not only answers.",
-    aboutBody: "I study intelligent decision-making in complex operational environments—from queueing networks, job-shop scheduling, and ride-hailing dispatch to financial reinforcement learning, Web3 trading, and multimodal recommendation. A central question is how to combine the reasoning ability of LLMs with verifiable optimization structure.",
-    researchTitle: "Research directions",
+    bio: "My research focuses on AI-driven decision-making and operations optimization, with broader interests in FinTech, quantitative finance, Web3, recommender systems, multimodal learning, large language models, and agents. I am particularly interested in combining LLM reasoning with verifiable optimization structure for complex operational and financial decisions.",
+    location: "Hong Kong, China",
+    advisorLabel: "Advisors",
+    advisors: "Prof. Houmin Yan (CityU) and Prof. Zuojun (Max) Shen (HKU)",
+    emailLabel: "Email",
+    linksLabel: "Links",
+    scholar: "Google Scholar",
+    navAria: "Page navigation",
+    avatarAria: "Abstract YL monogram avatar, not a real photograph",
+    newsTitle: "News",
+    newsNote: "Three most recent paper acceptances",
+    researchTitle: "Research",
+    researchIntro: "I work toward AI systems that do more than generate answers: they formulate models, evaluate policies, and support interpretable real-world decisions.",
     researchAreas: [
-      { index: "01", title: "AI × Operations", text: "LLM-assisted optimization modeling, scheduling policy design, online decisions, and reinforcement learning." },
-      { index: "02", title: "FinTech & Web3", text: "Quantitative trading, financial decision interfaces, and news-driven Web3 recommendation and backtesting." },
-      { index: "03", title: "Recommender Systems", text: "Multimodal and sequential recommendation, transfer learning, knowledge tracing, and model compression." },
-      { index: "04", title: "Reasoning & Agents", text: "Inference-time scaling, reward steering, skill evaluation, code generation, and agent recommendation." },
+      ["AI for Operations", "LLM-assisted optimization modeling, scheduling policy design, online decisions, queueing networks, and reinforcement learning."],
+      ["FinTech & Quantitative Finance", "Supply-chain finance, financial reinforcement learning, quantitative trading, and intelligent financial decision interfaces."],
+      ["Web3", "News-driven asset recommendation, utility modeling, and trading backtesting."],
+      ["Recommender Systems", "Multimodal and sequential recommendation, transfer learning, knowledge tracing, distillation, and model compression."],
+      ["LLMs & Agents", "Inference-time scaling, reward steering, skill evaluation, prompt optimization, code generation, and agent recommendation."],
     ],
-    papersLabel: "RESEARCH OUTPUT", papersTitle: "Publications & work in progress",
-    papersIntro: "Review status follows the latest CV. Publication titles, author lists, and venue information are presented in English.",
-    working: "Working Papers", review: "Under Review", accepted: "Published / Accepted",
-    openPaper: "View paper", showReview: "View all under-review papers", showArchive: "View full publication archive",
-    equal: "* Equal contribution. † Corresponding author.",
-    expLabel: "BACKGROUND", expTitle: "Education & research experience", education: "Education", experience: "Research experience",
-    service: "Professional service", awards: "Honors & awards", contactTitle: "Let’s talk research",
-    contactText: "I am always happy to connect around LLMs, operations optimization, FinTech, and recommender systems.",
-    contactCta: "Send an email", footer: "Built for research, collaboration, and open exchange.",
+    publicationsTitle: "Publications",
+    publicationsIntro: "A complete list of current working papers, manuscripts under review, and published or accepted work, including authors, status, year, topic, and available links.",
+    working: "Working Papers",
+    underReview: "Under Review",
+    published: "Published / Accepted",
+    papers: "papers",
+    linkLabel: "Paper",
+    contribution: "* Equal contribution. † Corresponding author.",
+    experienceTitle: "Education & Research Experience",
+    educationTitle: "Education",
+    researchExperienceTitle: "Research Experience",
+    advisorPrefix: "Advisor(s): ",
+    education: [
+      {
+        date: "Sep 2024 — Present",
+        title: "Ph.D. in Decision Analytics & Operations",
+        place: "City University of Hong Kong",
+        detail: "Research in AI-driven decision-making, operations optimization, FinTech, and large language models.",
+      },
+      {
+        date: "Sep 2021 — Jul 2024",
+        title: "M.S. in Computer Science & Technology",
+        place: "ShanghaiTech University / Institute of Computing Technology, CAS (Joint Program)",
+        detail: "Research in recommender systems, transfer learning, multimodal learning, and data mining.",
+      },
+      {
+        date: "Sep 2016 — Jul 2020",
+        title: "B.Eng. in Automation Engineering",
+        place: "University of Electronic Science and Technology of China",
+        detail: "Selected for the Liren Honors Class (40 students university-wide); undergraduate research in computer vision and 3D reconstruction.",
+      },
+    ],
+    experience: [
+      {
+        date: "Sep 2024 — Present",
+        title: "Researcher & Ph.D. Student",
+        place: "AIFTHK / City University of Hong Kong",
+        advisors: "Prof. Houmin Yan; Prof. Zuojun (Max) Shen",
+        detail: "Supply-chain finance modeling, LLM-enhanced decision systems, e-commerce GEO frameworks, and quantitative finance.",
+      },
+      {
+        date: "May 2023 — Jun 2024",
+        title: "Research Assistant",
+        place: "School of Management, University of Science and Technology of China",
+        advisors: "Prof. Chunxiao Li; Prof. Eric Zheng; Prof. Bin Gu",
+        detail: "Large language models, behavioral finance, and financial information systems.",
+      },
+      {
+        date: "Jul 2023 — Dec 2023",
+        title: "Research Assistant",
+        place: "CUHK Business School",
+        advisors: "Prof. Jing Wu",
+        detail: "LLMs and agents for operations management and supply chains.",
+      },
+      {
+        date: "Jul 2022 — Mar 2023",
+        title: "Visiting Student",
+        place: "Representation Learning Lab, Westlake University",
+        advisors: "Prof. Fajie Yuan",
+        detail: "Data mining, transfer learning, and multimodal recommendation.",
+      },
+      {
+        date: "May 2021 — Mar 2022",
+        title: "Research Intern",
+        place: "Shanghai Research Center for Brain Science and Brain-Inspired Intelligence",
+        advisors: "Prof. Yi Zhou",
+        detail: "NLP commonsense reasoning and knowledge graphs for investment management.",
+      },
+      {
+        date: "Sep 2018 — Jun 2020",
+        title: "Undergraduate Researcher",
+        place: "Pattern Recognition and Machine Intelligence Lab, UESTC",
+        advisors: "Prof. Lu Yang",
+        detail: "3D reconstruction, SLAM, and computer vision.",
+      },
+    ],
+    serviceTitle: "Professional Service",
+    serviceIntro: "Journal reviewing and conference program committee / reviewing service",
+    honorsTitle: "Honors & Awards",
+    services: [
+      ["Journals", "ACM TOIS · ACM TKDD · Information Processing & Management · Computers & Education: Artificial Intelligence · FLLM"],
+      ["Conferences", "ACM MM 2024 / 2025 / 2026 · ICLR 2024 / 2025 · KDD 2024 / 2025 / 2026"],
+      ["Program Committee", "AAAI 2025 / 2026 · CIKM 2025 / 2026"],
+      ["Workshops", "DCAI Workshop at WWW 2024"],
+    ],
+    honors: [
+      ["2020", "Outstanding Thesis Award, UESTC (Top 1%)"],
+      ["2019", "Two Second Prizes, 15th Challenge Cup, Sichuan Province (Team Leader)"],
+      ["2018", "Second Prize, 13th Freescale Smart Car Competition, Sichuan Province (Team Leader)"],
+      ["2017", "National Encouragement Scholarship (Top 3%)"],
+      ["2017", "First-Class Undergraduate Student Scholarship (Top 10%)"],
+    ],
+    contact: "I welcome conversations about related research and collaboration.",
+    updated: "Last updated: August 2026",
   },
 };
 
-const news = {
-  zh: [
-    { date: "2026 · CIKM / ECCV", text: "Three papers accepted: two at CIKM 2026 and one at ECCV 2026." },
-    { date: "2026 · JOURNALS", text: "New papers published in ACM TKDD and Knowledge-Based Systems." },
-    { date: "2025", text: "Recent work appeared at CVPR, WWW, WSDM, CIKM, and Findings of EMNLP." },
-  ],
-  en: [
-    { date: "2026 · CIKM / ECCV", text: "Three papers accepted: two at CIKM 2026 and one at ECCV 2026." },
-    { date: "2026 · JOURNALS", text: "New papers published in ACM TKDD and Knowledge-Based Systems." },
-    { date: "2025", text: "Recent work appeared at CVPR, WWW, WSDM, CIKM, and Findings of EMNLP." },
-  ],
-};
-
-const education = {
-  zh: [
-    ["2024 — 至今", "博士 · 决策分析与运筹学", "香港城市大学"],
-    ["2021 — 2024", "硕士 · 计算机科学与技术", "上海科技大学 / 中国科学院计算技术研究所"],
-    ["2016 — 2020", "本科 · 自动化工程", "电子科技大学 · 立人班"],
-  ],
-  en: [
-    ["2024 — Present", "Ph.D. · Decision Analytics & Operations", "City University of Hong Kong"],
-    ["2021 — 2024", "M.S. · Computer Science & Technology", "ShanghaiTech University / ICT, CAS"],
-    ["2016 — 2020", "B.Eng. · Automation Engineering", "University of Electronic Science and Technology of China"],
-  ],
-};
-
-const experience = {
-  zh: [
-    ["2024 — 至今", "研究员 & 博士生", "AIFTHK / 香港城市大学", "供应链金融建模、LLM 增强的决策与 GEO 框架"],
-    ["2023", "研究助理", "香港中文大学商学院", "LLMs 与智能体在运筹管理和供应链中的应用"],
-    ["2022 — 2023", "访问学生", "西湖大学表示学习实验室", "数据挖掘、迁移学习与多模态推荐"],
-    ["2021 — 2022", "研究实习生", "上海脑科学与类脑智能研究中心", "NLP 常识推理与投资知识图谱"],
-  ],
-  en: [
-    ["2024 — Present", "Researcher & Ph.D. Student", "AIFTHK / City University of Hong Kong", "Supply-chain finance modeling, LLM-enhanced decision systems, and GEO frameworks"],
-    ["2023", "Research Assistant", "CUHK Business School", "LLMs and agents for operations management and supply chains"],
-    ["2022 — 2023", "Visiting Student", "Representation Learning Lab, Westlake University", "Data mining, transfer learning, and multimodal recommendation"],
-    ["2021 — 2022", "Research Intern", "Shanghai Research Center for Brain Science and Brain-Inspired Intelligence", "NLP commonsense reasoning and knowledge graphs for investment"],
-  ],
-};
+const news = [
+  {
+    title: "On the Role of Language Representations in Auto-Bidding: Findings and Implications",
+    venue: "CIKM",
+    year: "2026",
+    href: "https://arxiv.org/abs/2605.05833",
+  },
+  {
+    title: "ClinSDT: LLM-Encoded Clinical Semantic Guidance for Sepsis Treatment via Decision Transformer",
+    venue: "CIKM",
+    year: "2026",
+  },
+  {
+    title: "Aligning Human Sense: Calibrated Distributional Reward Learning for Video Generation",
+    venue: "ECCV",
+    year: "2026",
+  },
+];
 
 function ExternalLink({ href, children, className = "" }: { href: string; children: React.ReactNode; className?: string }) {
   return <a href={href} className={className} target="_blank" rel="noreferrer">{children}</a>;
@@ -123,84 +297,205 @@ function AuthorLine({ authors }: { authors: string }) {
   return <>{parts.map((part, index) => part.startsWith("Youhua Li") ? <strong key={`${part}-${index}`}>{part}</strong> : part)}</>;
 }
 
-function PaperItem({ paper, openLabel, featured = false }: { paper: Paper; openLabel: string; featured?: boolean }) {
+function SectionHeading({ icon, title, note }: { icon: string; title: string; note?: string }) {
   return (
-    <article className={`paper ${featured ? "paper-featured" : ""}`}>
-      <div className="paper-meta"><span>{paper.year}</span><span>{paper.tag}</span></div>
-      <h4>{paper.title}</h4>
-      <p className="authors"><AuthorLine authors={paper.authors} /></p>
-      <div className="paper-foot">
-        <span className="venue">{paper.venue}</span>
-        {paper.href ? <ExternalLink href={paper.href} className="paper-link">{openLabel} ↗</ExternalLink> : null}
+    <div className="section-heading">
+      <h2><span aria-hidden="true">{icon}</span>{title}</h2>
+      {note ? <p>{note}</p> : null}
+    </div>
+  );
+}
+
+function PaperItem({ paper, index, linkLabel }: { paper: Paper; index: number; linkLabel: string }) {
+  const title = paper.href
+    ? <ExternalLink href={paper.href}>{paper.title}</ExternalLink>
+    : paper.title;
+
+  return (
+    <li className="paper-item">
+      <span className="paper-number">{String(index).padStart(2, "0")}</span>
+      <div className="paper-content">
+        <h4>{title}</h4>
+        <p className="paper-authors"><AuthorLine authors={paper.authors} /></p>
+        <p className="paper-venue"><em>{paper.venue}</em> · {paper.year}{paper.tag ? <span className="paper-topic">{paper.tag}</span> : null}</p>
+        {paper.href ? <ExternalLink href={paper.href} className="paper-link">[{linkLabel}]</ExternalLink> : null}
       </div>
-    </article>
+    </li>
+  );
+}
+
+function PaperGroup({ title, papers, linkLabel, start = 1 }: { title: string; papers: Paper[]; linkLabel: string; start?: number }) {
+  return (
+    <section className="paper-group" aria-label={title}>
+      <div className="paper-group-heading">
+        <h3>{title}</h3>
+        <span>{papers.length} papers</span>
+      </div>
+      <ol className="paper-list">
+        {papers.map((paper, index) => <PaperItem key={paper.title} paper={paper} index={start + index} linkLabel={linkLabel} />)}
+      </ol>
+    </section>
   );
 }
 
 export function AcademicHome({ locale }: { locale: Locale }) {
   const t = copy[locale];
   const isZh = locale === "zh";
-  const featuredPublications = publications.slice(0, 11);
-  const archivedPublications = publications.slice(11);
+  const publicationYears = [...new Set(publications.map((paper) => paper.year))].sort((a, b) => Number(b) - Number(a));
+  const publicationGroups = publicationYears.map((year) => ({
+    year,
+    papers: publications.filter((paper) => paper.year === year),
+  }));
 
   return (
-    <main>
-      <header className="site-header">
-        <a className="brand" href="#top" aria-label="Youhua Li home"><span className="brand-mark">YL</span><span>Youhua Li</span></a>
-        <nav aria-label="Primary navigation">{t.nav.map(([label, href]) => <a key={href} href={href}>{label}</a>)}</nav>
-        <a className="language" href={t.langHref} lang={isZh ? "en" : "zh-CN"}>{t.lang}</a>
+    <div className="site" lang={isZh ? "zh-CN" : "en"}>
+      <a className="skip-link" href="#content">{isZh ? "跳转至主要内容" : "Skip to main content"}</a>
+
+      <header className="topbar">
+        <div className="page-width topbar-inner">
+          <a className="site-name" href="#top" aria-label={t.pageLabel}>Youhua Li</a>
+          <nav aria-label={t.navAria}>
+            {t.nav.map(([label, href]) => <a key={href} href={href}>{label}</a>)}
+          </nav>
+          <a className="language-switch" href={t.langHref}>{t.lang}</a>
+        </div>
       </header>
 
-      <section className="hero shell" id="top">
-        <div className="hero-copy">
-          <p className="eyebrow">{t.eyebrow}</p>
-          <h1>Youhua Li <span>{isZh ? "李佑华" : ""}</span></h1>
-          <p className="role">{t.role}</p><p className="affiliation">{t.affiliation}</p>
-          <p className="hero-intro">{t.intro}</p>
-          <div className="hero-actions">
-            <a className="button button-primary" href={`mailto:${profile.email}`}>{t.email} <span>↗</span></a>
-            <ExternalLink className="button button-secondary" href={profile.scholar}>{t.scholar} <span>↗</span></ExternalLink>
+      <main className="page-width" id="content">
+        <section className="profile" id="top">
+          <div className="avatar" role="img" aria-label={t.avatarAria}>
+            <span className="avatar-ring ring-one" aria-hidden="true" />
+            <span className="avatar-ring ring-two" aria-hidden="true" />
+            <span className="avatar-dot dot-one" aria-hidden="true" />
+            <span className="avatar-dot dot-two" aria-hidden="true" />
+            <span className="avatar-letters" aria-hidden="true">YL</span>
           </div>
-          <div className="focus-line"><span>{t.now}</span><p>{t.nowText}</p></div>
+          <div className="profile-main">
+            <p className="profile-kicker">Decision Analytics · Operations · Artificial Intelligence</p>
+            <h1>Youhua Li <span>{t.nameCn}</span></h1>
+            <p className="profile-role">{t.role}</p>
+            <p className="profile-affiliation">{t.affiliation}</p>
+            <p className="profile-bio">{t.bio}</p>
+
+            <dl className="profile-details">
+              <div><dt>{isZh ? "所在地" : "Location"}</dt><dd>{t.location}</dd></div>
+              <div><dt>{t.advisorLabel}</dt><dd>{t.advisors}</dd></div>
+              <div><dt>{t.emailLabel}</dt><dd><a href={`mailto:${profile.email}`}>{profile.email}</a></dd></div>
+              <div><dt>{t.linksLabel}</dt><dd><ExternalLink href={profile.scholar}>{t.scholar}</ExternalLink><span> / </span><ExternalLink href={profile.orcid}>ORCID</ExternalLink></dd></div>
+            </dl>
+          </div>
+        </section>
+
+        <section className="content-section" id="news">
+          <SectionHeading icon="🔥" title={t.newsTitle} note={t.newsNote} />
+          <ol className="news-list">
+            {news.map((item) => (
+              <li className="news-item" key={item.title}>
+                <div className="news-title">
+                  {item.href ? <ExternalLink href={item.href}>{item.title}</ExternalLink> : item.title}
+                </div>
+                <div className="news-venue"><span>{item.venue}</span><time>{item.year}</time></div>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <section className="content-section" id="research">
+          <SectionHeading icon="🔬" title={t.researchTitle} />
+          <p className="section-intro">{t.researchIntro}</p>
+          <div className="research-list">
+            {t.researchAreas.map(([title, text], index) => (
+              <article key={title}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <div><h3>{title}</h3><p>{text}</p></div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="content-section publications" id="publications">
+          <SectionHeading icon="📝" title={t.publicationsTitle} />
+          <p className="section-intro">{t.publicationsIntro}</p>
+
+          <PaperGroup title={t.working} papers={workingPapers} linkLabel={t.linkLabel} />
+          <PaperGroup title={t.underReview} papers={underReview} linkLabel={t.linkLabel} />
+
+          <section className="paper-group published-group" aria-label={t.published}>
+            <div className="paper-group-heading">
+              <h3>{t.published}</h3>
+              <span>{publications.length} {t.papers}</span>
+            </div>
+            {publicationGroups.map(({ year, papers: yearPapers }, groupIndex) => {
+              const start = publicationGroups
+                .slice(0, groupIndex)
+                .reduce((count, group) => count + group.papers.length, 1);
+              return (
+                <div className="publication-year" key={year}>
+                  <h4>{year}</h4>
+                  <ol className="paper-list">
+                    {yearPapers.map((paper, index) => <PaperItem key={paper.title} paper={paper} index={start + index} linkLabel={t.linkLabel} />)}
+                  </ol>
+                </div>
+              );
+            })}
+          </section>
+          <p className="contribution-note">{t.contribution}</p>
+        </section>
+
+        <section className="content-section" id="experience">
+          <SectionHeading icon="📖" title={t.experienceTitle} />
+
+          <div className="resume-block">
+            <h3>{t.educationTitle}</h3>
+            <div className="timeline">
+              {t.education.map((item) => (
+                <article key={`${item.date}-${item.title}`}>
+                  <time>{item.date}</time>
+                  <div><h4>{item.title}</h4><p className="timeline-place">{item.place}</p><p>{item.detail}</p></div>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="resume-block">
+            <h3>{t.researchExperienceTitle}</h3>
+            <div className="timeline">
+              {t.experience.map((item) => (
+                <article key={`${item.date}-${item.title}-${item.place}`}>
+                  <time>{item.date}</time>
+                  <div>
+                    <h4>{item.title}</h4>
+                    <p className="timeline-place">{item.place}</p>
+                    <p className="timeline-advisors"><strong>{t.advisorPrefix}</strong>{item.advisors}</p>
+                    <p>{item.detail}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="content-section service-section" id="service">
+          <SectionHeading icon="💬" title={t.serviceTitle} note={t.serviceIntro} />
+          <dl className="service-list">
+            {t.services.map(([label, detail]) => <div key={label}><dt>{label}</dt><dd>{detail}</dd></div>)}
+          </dl>
+
+          <div className="honors-block">
+            <SectionHeading icon="🎖" title={t.honorsTitle} />
+            <ul className="honors-list">
+              {t.honors.map(([year, honor]) => <li key={`${year}-${honor}`}><time>{year}</time><span>{honor}</span></li>)}
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div className="page-width footer-inner">
+          <div><strong>Youhua Li</strong><span>{t.contact}</span></div>
+          <div className="footer-contact"><a href={`mailto:${profile.email}`}>{profile.email}</a><span>{t.updated}</span></div>
         </div>
-        <div className="portrait-wrap" aria-label={isZh ? "非真人抽象头像" : "Abstract non-photographic avatar"}>
-          <div className="portrait-grid" aria-hidden="true" /><div className="portrait-orbit portrait-orbit-one" aria-hidden="true" /><div className="portrait-orbit portrait-orbit-two" aria-hidden="true" />
-          <div className="portrait-card"><span className="portrait-kicker">RESEARCHER</span><span className="portrait-initials">Y<span>L</span></span><span className="portrait-caption">OR · AI · FINTECH</span></div>
-          <span className="portrait-dot dot-one" aria-hidden="true" /><span className="portrait-dot dot-two" aria-hidden="true" />
-        </div>
-      </section>
-
-      <section className="news-band" id="news"><div className="shell">
-        <div className="section-heading compact"><p>{t.newsLabel}</p><h2>{t.newsTitle}</h2><span>{t.newsIntro}</span></div>
-        <div className="news-list">{news[locale].map((item) => <article className="news-item" key={item.date}><time>{item.date}</time><p>{item.text}</p><span aria-hidden="true">↗</span></article>)}</div>
-      </div></section>
-
-      <section className="research shell" id="research">
-        <div className="research-intro"><div className="section-heading"><p>{t.aboutLabel}</p><h2>{t.aboutTitle}</h2></div><p className="research-statement">{t.aboutBody}</p></div>
-        <div className="direction-heading"><h3>{t.researchTitle}</h3><span>04</span></div>
-        <div className="research-grid">{t.researchAreas.map((area) => <article className="research-card" key={area.index}><span>{area.index}</span><h3>{area.title}</h3><p>{area.text}</p></article>)}</div>
-      </section>
-
-      <section className="papers-section" id="publications"><div className="shell">
-        <div className="section-heading papers-heading"><p>{t.papersLabel}</p><h2>{t.papersTitle}</h2><span>{t.papersIntro}</span></div>
-        <div className="paper-group"><div className="paper-group-title"><h3>{t.working}</h3><span>02</span></div><div className="paper-grid two-col">{workingPapers.map((paper) => <PaperItem key={paper.title} paper={paper} openLabel={t.openPaper} featured />)}</div></div>
-        <div className="paper-group"><div className="paper-group-title"><h3>{t.review}</h3><span>{String(underReview.length).padStart(2, "0")}</span></div><div className="paper-list">{underReview.slice(0, 4).map((paper) => <PaperItem key={paper.title} paper={paper} openLabel={t.openPaper} />)}</div><details className="paper-details"><summary>{t.showReview}<span>+</span></summary><div className="paper-list detail-list">{underReview.slice(4).map((paper) => <PaperItem key={paper.title} paper={paper} openLabel={t.openPaper} />)}</div></details></div>
-        <div className="paper-group"><div className="paper-group-title"><h3>{t.accepted}</h3><span>{String(publications.length).padStart(2, "0")}</span></div><div className="paper-list">{featuredPublications.map((paper) => <PaperItem key={paper.title} paper={paper} openLabel={t.openPaper} />)}</div><details className="paper-details"><summary>{t.showArchive}<span>+</span></summary><div className="paper-list detail-list">{archivedPublications.map((paper) => <PaperItem key={paper.title} paper={paper} openLabel={t.openPaper} />)}</div></details></div>
-        <p className="contribution-note">{t.equal}</p>
-      </div></section>
-
-      <section className="background shell" id="experience">
-        <div className="section-heading background-heading"><p>{t.expLabel}</p><h2>{t.expTitle}</h2></div>
-        <div className="background-columns">
-          <div><h3>{t.education}</h3><div className="timeline">{education[locale].map(([date, title, place]) => <article key={`${date}-${title}`}><time>{date}</time><div><h4>{title}</h4><p>{place}</p></div></article>)}</div></div>
-          <div><h3>{t.experience}</h3><div className="timeline">{experience[locale].map(([date, title, place, detail]) => <article key={`${date}-${title}`}><time>{date}</time><div><h4>{title}</h4><p>{place}</p><span>{detail}</span></div></article>)}</div></div>
-        </div>
-        <div className="service-row"><div><h3>{t.service}</h3><p>TOIS · TKDD · IPM · ACM MM · ICLR · KDD · AAAI · CIKM · WWW DCAI</p></div><div><h3>{t.awards}</h3><p>{isZh ? "电子科技大学优秀毕业论文（Top 1%）· 国家励志奖学金 · 挑战杯四川省二等奖" : "Outstanding Thesis Award, UESTC (Top 1%) · National Encouragement Scholarship · Challenge Cup, Sichuan Province"}</p></div></div>
-      </section>
-
-      <section className="contact-section"><div className="shell contact-inner"><div><p className="eyebrow">COLLABORATION</p><h2>{t.contactTitle}</h2><span>{t.contactText}</span></div><a className="contact-button" href={`mailto:${profile.email}`}>{t.contactCta}<span>↗</span></a></div></section>
-      <footer className="site-footer shell"><div><span className="brand-mark">YL</span><p>© 2026 Youhua Li</p></div><p>{t.footer}</p><div className="footer-links"><a href={`mailto:${profile.email}`}>Email</a><ExternalLink href={profile.scholar}>Scholar</ExternalLink><ExternalLink href={profile.orcid}>ORCID</ExternalLink></div></footer>
-    </main>
+      </footer>
+    </div>
   );
 }
-
