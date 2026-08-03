@@ -91,8 +91,23 @@ test("keeps the POMS and OR manuscripts first and includes the two new submissio
     const beyond = reviewMarkup.indexOf("Beyond Uniform Alignment");
     const psi = reviewMarkup.indexOf("PSI-KT: Progressive State Inference for Knowledge Tracing");
     assert.ok(poms >= 0 && or > poms && beyond > or && psi > beyond);
-    assert.match(reviewMarkup, /<strong>Youhua Li<\/strong>, Yongxin Ni/);
+    assert.match(reviewMarkup, /<strong>Youhua Li†<\/strong>, Yongxin Ni†/);
     assert.doesNotMatch(reviewMarkup, /Youhua Li, et al\./);
+  }
+});
+
+test("marks Youhua Li and Yongxin Ni as co-corresponding authors on the three specified manuscripts", async () => {
+  for (const file of [root, english]) {
+    const html = await readFile(file, "utf8");
+    const reviewStart = html.indexOf("<h3>Under Review</h3>");
+    const publishedStart = html.indexOf("<h3>Published / Accepted</h3>");
+    const reviewMarkup = html.slice(reviewStart, publishedStart);
+    for (const title of ["TACT:", "WitMem:", "EVE-Bench:"]) {
+      const start = reviewMarkup.indexOf(`<h4>${title}`);
+      const end = reviewMarkup.indexOf('</li>', start);
+      const paperMarkup = reviewMarkup.slice(start, end);
+      assert.match(paperMarkup, /<strong>Youhua Li†<\/strong>, Yongxin Ni†/);
+    }
   }
 });
 

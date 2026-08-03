@@ -45,7 +45,7 @@ export const underReview: Paper[] = [
   {
     title: "TACT: A Framework for Zero-Shot Task-to-Capability Transfer",
     authors:
-      "Xiaoxuan Dong, Zichen Yuan, Jin Zhang, Yue Zhou, Tingyong Wu, Dexu Yu, Wenhao Deng, Junchen Fu, Pengwei Sun, Yang Ran, Bo Lan, Youhua Li, Yongxin Ni",
+      "Xiaoxuan Dong, Zichen Yuan, Jin Zhang, Yue Zhou, Tingyong Wu, Dexu Yu, Wenhao Deng, Junchen Fu, Pengwei Sun, Yang Ran, Bo Lan, Youhua Li†, Yongxin Ni†",
     venue: "Under Review",
     year: "2027",
     tag: "AI Agents",
@@ -53,7 +53,7 @@ export const underReview: Paper[] = [
   {
     title: "WitMem: Evidence-Witnessed Governance for Long-Term Agent Memory",
     authors:
-      "Shibo Liu, Jin Zhang, Yilong Liu, Tingyu Liang, Weihan Long, Yechen Qin, Zengrong Deng, Yiming Lin, Jining Luan, Zihao Rao, Dexu Yu, Pengwei Sun, Yang Ran, Hanwen Du, Youhua Li, Yongxin Ni",
+      "Shibo Liu, Jin Zhang, Yilong Liu, Tingyu Liang, Weihan Long, Yechen Qin, Zengrong Deng, Yiming Lin, Jining Luan, Zihao Rao, Dexu Yu, Pengwei Sun, Yang Ran, Hanwen Du, Youhua Li†, Yongxin Ni†",
     venue: "Under Review",
     year: "2027",
     tag: "Agent Memory",
@@ -71,7 +71,7 @@ export const underReview: Paper[] = [
     title:
       "EVE-Bench: Entropy-Guided Benchmarking and Evaluation for Frontier Video Generation Models",
     authors:
-      "Nai-Xin Zhai, Qingyuan Hong, Xiao Jin, Liyuan Lillian Ma, Dexu Yu, Xuanqi Lan, Sihan Chen, Junchen Fu, Youhua Li, Yongxin Ni",
+      "Nai-Xin Zhai, Qingyuan Hong, Xiao Jin, Liyuan Lillian Ma, Dexu Yu, Xuanqi Lan, Sihan Chen, Junchen Fu, Youhua Li†, Yongxin Ni†",
     venue: "Under Review",
     year: "2027",
     tag: "Video Generation",
