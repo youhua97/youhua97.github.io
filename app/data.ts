@@ -9,6 +9,40 @@ export type Paper = {
 
 export const underReview: Paper[] = [
   {
+    title:
+      "LLM-Assisted Scheduling Policy Design and Refinement: Evidence Across Queueing Networks, Job-Shop Scheduling, and Ride-Hailing Dispatch",
+    authors:
+      "Youhua Li, Sibo Xu, Yiqi Sun, Pengfei Guo, Zuojun (Max) Shen, Houmin Yan",
+    venue: "Production and Operations Management (Under Review)",
+    year: "2026",
+    tag: "Operations",
+  },
+  {
+    title:
+      "Principled Inference-Time Scaling: A Unified Framework for LLM-Based Optimization Modeling",
+    authors: "Youhua Li*, Yiqi Sun*, Zuojun (Max) Shen, Houmin Yan",
+    venue: "Operations Research (Revise & Resubmit)",
+    year: "2026",
+    href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6562298",
+    tag: "Optimization Modeling",
+  },
+  {
+    title:
+      "Beyond Uniform Alignment: Rethinking Representation Fusion in Personalized LLM-based Recommendation",
+    authors: "Jining Luan, Zichen Yuan, Yichen Wu, Guanyu Zhu, Youhua Li†",
+    venue: "Under Review",
+    year: "2026",
+    tag: "LLM-based Recommendation",
+  },
+  {
+    title: "PSI-KT: Progressive State Inference for Knowledge Tracing",
+    authors:
+      "Ke Yan, Jining Luan, Youhua Li, Zihao Rao, Ersheng Ni, Sicong Liu, Jinchuan Zhang",
+    venue: "Under Review",
+    year: "2026",
+    tag: "Knowledge Tracing",
+  },
+  {
     title: "TACT: A Framework for Zero-Shot Task-to-Capability Transfer",
     authors:
       "Xiaoxuan Dong, Zichen Yuan, Jin Zhang, Yue Zhou, Tingyong Wu, Dexu Yu, Wenhao Deng, Junchen Fu, Pengwei Sun, Yang Ran, Bo Lan, Youhua Li, Yongxin Ni",
@@ -19,7 +53,7 @@ export const underReview: Paper[] = [
   {
     title: "WitMem: Evidence-Witnessed Governance for Long-Term Agent Memory",
     authors:
-      "Shibo Liu, Jin Zhang, Yilong Liu, Tingyu Liang, Weihan Long, Yechen Qin, Zengrong Deng, Yiming Lin, Jining Luan, Zihao Rao, Dexu Yu, Pengwei Sun, Yang Ran, Hanwen Du, Youhua Li, et al.",
+      "Shibo Liu, Jin Zhang, Yilong Liu, Tingyu Liang, Weihan Long, Yechen Qin, Zengrong Deng, Yiming Lin, Jining Luan, Zihao Rao, Dexu Yu, Pengwei Sun, Yang Ran, Hanwen Du, Youhua Li, Yongxin Ni",
     venue: "AAAI 2027 Conference Submission",
     year: "2027",
     tag: "Agent Memory",
@@ -77,24 +111,6 @@ export const underReview: Paper[] = [
     venue: "Under Review",
     year: "2026",
     tag: "Decision Intelligence",
-  },
-  {
-    title:
-      "LLM-Assisted Scheduling Policy Design and Refinement: Evidence Across Queueing Networks, Job-Shop Scheduling, and Ride-Hailing Dispatch",
-    authors:
-      "Youhua Li, Sibo Xu, Yiqi Sun, Pengfei Guo, Zuojun (Max) Shen, Houmin Yan",
-    venue: "Production and Operations Management (Under Review)",
-    year: "2026",
-    tag: "Operations",
-  },
-  {
-    title:
-      "Principled Inference-Time Scaling: A Unified Framework for LLM-Based Optimization Modeling",
-    authors: "Youhua Li*, Yiqi Sun*, Zuojun (Max) Shen, Houmin Yan",
-    venue: "Operations Research (Revise & Resubmit)",
-    year: "2026",
-    href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6562298",
-    tag: "Optimization Modeling",
   },
   {
     title:

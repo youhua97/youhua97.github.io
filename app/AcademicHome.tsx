@@ -21,30 +21,25 @@ const copy = {
       ["经历", "#experience"],
     ],
     nameCn: "李佑华",
-    role: "香港城市大学 决策分析与运筹学博士生",
+    role: "香港城市大学 金融决策分析与运筹学博士生",
     affiliation: "AIFTHK Researcher · City University of Hong Kong",
     bio: "我的研究聚焦于人工智能驱动的决策与运筹优化，并延伸至金融科技、量化金融、Web3、推荐系统、多模态学习、大语言模型与智能体。当前工作重点是把 LLM 的推理能力与可验证的优化结构结合，用于复杂运营与金融决策。",
     location: "中国香港",
-    advisorLabel: "导师",
-    advisors: "Prof. Houmin Yan（香港城市大学商学院前院长、讲座教授）与 Prof. Zuojun (Max) Shen（香港大学副校长、中国工程院院士）",
     emailLabel: "邮箱",
     linksLabel: "链接",
     scholar: "Google Scholar",
     navAria: "页面导航",
-    avatarAria: "YL 字母抽象头像（非真人照片）",
+    avatarAria: "戴学位帽、手持书本的哆啦A梦插画头像",
     newsTitle: "最新动态",
     newsNote: "最新公开的录用成果",
     researchTitle: "研究方向",
-    researchIntro: "我希望让 AI 不只是生成答案，也能参与建模、评估策略并支持可解释的真实决策。",
     researchAreas: [
       ["AI for Operations", "LLM 辅助优化建模、调度策略设计、在线决策、排队网络与强化学习。"],
-      ["FinTech & Quantitative Finance", "供应链金融、金融强化学习、量化交易与智能金融决策接口。"],
-      ["Web3", "新闻驱动的资产推荐、效用建模与交易回测。"],
+      ["FinTech, Web3 & Quantitative Finance", "供应链金融、金融强化学习、量化交易、新闻驱动的 Web3 资产推荐、效用建模与交易回测。"],
       ["Recommender Systems", "多模态与序列推荐、迁移学习、知识追踪、蒸馏与模型压缩。"],
       ["LLMs & Agents", "推理时扩展、奖励引导、能力评测、提示词优化、代码生成与智能体推荐。"],
     ],
     publicationsTitle: "论文",
-    publicationsIntro: "以下论文信息全部使用英文，并完整列出题目、作者、状态、年份、研究主题及可用链接。",
     underReview: "Under Review",
     published: "Published / Accepted",
     papers: "papers",
@@ -56,7 +51,7 @@ const copy = {
     education: [
       {
         date: "2024.09 — 至今",
-        title: "博士 · 决策分析与运筹学",
+        title: "博士 · 金融决策分析与运筹学",
         place: "香港城市大学",
         detail: "导师：Prof. Houmin Yan（香港城市大学商学院前院长、讲座教授）与 Prof. Zuojun (Max) Shen（香港大学副校长、中国工程院院士）。研究方向：AI 驱动的决策、运筹优化、金融科技与大语言模型。",
       },
@@ -78,7 +73,7 @@ const copy = {
         date: "2024.09 — 至今",
         title: "Researcher & Ph.D. Student",
         place: "AIFTHK / 香港城市大学",
-        advisors: "Prof. Houmin Yan（香港城市大学商学院前院长、讲座教授）；Prof. Zuojun (Max) Shen（香港大学副校长、中国工程院院士）",
+        advisors: "Prof. Houmin Yan；Prof. Zuojun (Max) Shen",
         detail: "供应链金融建模、LLM 增强的决策系统、电商 GEO 框架与金融量化研究。",
       },
       {
@@ -122,8 +117,9 @@ const copy = {
     honorsTitle: "荣誉与奖励",
     services: [
       ["Journals", "ACM TOIS · ACM TKDD · Information Processing & Management · Computers & Education: Artificial Intelligence · FLLM"],
-      ["Conferences", "ACM MM 2024 / 2025 / 2026 · ICLR 2024 / 2025 · KDD 2024 / 2025 / 2026"],
-      ["Program Committee", "AAAI 2025 / 2026 · CIKM 2025 / 2026"],
+      ["Senior Program Committee", "CIKM 2026"],
+      ["Program Committee", "AAAI 2025 / 2026 · WSDM 2026 · KDD 2024 / 2025 / 2026"],
+      ["Conference Reviewer", "ACM MM 2024 / 2025 / 2026 · ICLR 2024 / 2025 · CIKM 2025"],
       ["Workshops", "DCAI Workshop at WWW 2024"],
     ],
     honors: [
@@ -148,30 +144,25 @@ const copy = {
       ["Experience", "#experience"],
     ],
     nameCn: "李佑华",
-    role: "Ph.D. Student in Decision Analytics & Operations",
+    role: "Ph.D. Student in Financial Decision Analytics & Operations",
     affiliation: "Researcher at AIFTHK · City University of Hong Kong",
     bio: "My research focuses on AI-driven decision-making and operations optimization, with broader interests in FinTech, quantitative finance, Web3, recommender systems, multimodal learning, large language models, and agents. I am particularly interested in combining LLM reasoning with verifiable optimization structure for complex operational and financial decisions.",
     location: "Hong Kong, China",
-    advisorLabel: "Advisors",
-    advisors: "Prof. Houmin Yan (Former Dean, College of Business, CityU; Chair Professor) and Prof. Zuojun (Max) Shen (Vice-President, HKU; Member of the Chinese Academy of Engineering)",
     emailLabel: "Email",
     linksLabel: "Links",
     scholar: "Google Scholar",
     navAria: "Page navigation",
-    avatarAria: "Abstract YL monogram avatar, not a real photograph",
+    avatarAria: "Illustrated Doraemon avatar wearing a graduation cap and holding a book",
     newsTitle: "News",
     newsNote: "Latest public acceptance",
     researchTitle: "Research",
-    researchIntro: "I work toward AI systems that do more than generate answers: they formulate models, evaluate policies, and support interpretable real-world decisions.",
     researchAreas: [
       ["AI for Operations", "LLM-assisted optimization modeling, scheduling policy design, online decisions, queueing networks, and reinforcement learning."],
-      ["FinTech & Quantitative Finance", "Supply-chain finance, financial reinforcement learning, quantitative trading, and intelligent financial decision interfaces."],
-      ["Web3", "News-driven asset recommendation, utility modeling, and trading backtesting."],
+      ["FinTech, Web3 & Quantitative Finance", "Supply-chain finance, financial reinforcement learning, quantitative trading, news-driven Web3 asset recommendation, utility modeling, and trading backtesting."],
       ["Recommender Systems", "Multimodal and sequential recommendation, transfer learning, knowledge tracing, distillation, and model compression."],
       ["LLMs & Agents", "Inference-time scaling, reward steering, skill evaluation, prompt optimization, code generation, and agent recommendation."],
     ],
     publicationsTitle: "Publications",
-    publicationsIntro: "A complete list of manuscripts under review and published or accepted work, including authors, status, year, topic, and available links.",
     underReview: "Under Review",
     published: "Published / Accepted",
     papers: "papers",
@@ -183,7 +174,7 @@ const copy = {
     education: [
       {
         date: "Sep 2024 — Present",
-        title: "Ph.D. in Decision Analytics & Operations",
+        title: "Ph.D. in Financial Decision Analytics & Operations",
         place: "City University of Hong Kong",
         detail: "Advisors: Prof. Houmin Yan (Former Dean, College of Business, CityU; Chair Professor) and Prof. Zuojun (Max) Shen (Vice-President, HKU; Member of the Chinese Academy of Engineering). Research in AI-driven decision-making, operations optimization, FinTech, and large language models.",
       },
@@ -205,7 +196,7 @@ const copy = {
         date: "Sep 2024 — Present",
         title: "Researcher & Ph.D. Student",
         place: "AIFTHK / City University of Hong Kong",
-        advisors: "Prof. Houmin Yan (Former Dean, College of Business, CityU; Chair Professor); Prof. Zuojun (Max) Shen (Vice-President, HKU; Member of the Chinese Academy of Engineering)",
+        advisors: "Prof. Houmin Yan; Prof. Zuojun (Max) Shen",
         detail: "Supply-chain finance modeling, LLM-enhanced decision systems, e-commerce GEO frameworks, and quantitative finance.",
       },
       {
@@ -249,8 +240,9 @@ const copy = {
     honorsTitle: "Honors & Awards",
     services: [
       ["Journals", "ACM TOIS · ACM TKDD · Information Processing & Management · Computers & Education: Artificial Intelligence · FLLM"],
-      ["Conferences", "ACM MM 2024 / 2025 / 2026 · ICLR 2024 / 2025 · KDD 2024 / 2025 / 2026"],
-      ["Program Committee", "AAAI 2025 / 2026 · CIKM 2025 / 2026"],
+      ["Senior Program Committee", "CIKM 2026"],
+      ["Program Committee", "AAAI 2025 / 2026 · WSDM 2026 · KDD 2024 / 2025 / 2026"],
+      ["Conference Reviewer", "ACM MM 2024 / 2025 / 2026 · ICLR 2024 / 2025 · CIKM 2025"],
       ["Workshops", "DCAI Workshop at WWW 2024"],
     ],
     honors: [
@@ -351,12 +343,10 @@ export function AcademicHome({ locale }: { locale: Locale }) {
 
       <main className="page-width" id="content">
         <section className="profile" id="top">
-          <div className="avatar" role="img" aria-label={t.avatarAria}>
-            <span className="avatar-ring ring-one" aria-hidden="true" />
-            <span className="avatar-ring ring-two" aria-hidden="true" />
-            <span className="avatar-dot dot-one" aria-hidden="true" />
-            <span className="avatar-dot dot-two" aria-hidden="true" />
-            <span className="avatar-letters" aria-hidden="true">YL</span>
+          <div className="avatar">
+            {/* Static export: the local avatar is pre-sized and optimized. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/doraemon-avatar.png" alt={t.avatarAria} width="512" height="512" />
           </div>
           <div className="profile-main">
             <p className="profile-kicker">Decision Analytics · Operations · Artificial Intelligence</p>
@@ -367,7 +357,6 @@ export function AcademicHome({ locale }: { locale: Locale }) {
 
             <dl className="profile-details">
               <div><dt>{isZh ? "所在地" : "Location"}</dt><dd>{t.location}</dd></div>
-              <div><dt>{t.advisorLabel}</dt><dd>{t.advisors}</dd></div>
               <div><dt>{t.emailLabel}</dt><dd><a href={`mailto:${profile.email}`}>{profile.email}</a></dd></div>
               <div><dt>{t.linksLabel}</dt><dd><ExternalLink href={profile.scholar}>{t.scholar}</ExternalLink><span> / </span><ExternalLink href={profile.orcid}>ORCID</ExternalLink></dd></div>
             </dl>
@@ -407,7 +396,6 @@ export function AcademicHome({ locale }: { locale: Locale }) {
 
         <section className="content-section" id="research">
           <SectionHeading icon="🔬" title={t.researchTitle} />
-          <p className="section-intro">{t.researchIntro}</p>
           <div className="research-list">
             {t.researchAreas.map(([title, text], index) => (
               <article key={title}>
@@ -420,7 +408,6 @@ export function AcademicHome({ locale }: { locale: Locale }) {
 
         <section className="content-section publications" id="publications">
           <SectionHeading icon="📝" title={t.publicationsTitle} />
-          <p className="section-intro">{t.publicationsIntro}</p>
 
           <PaperGroup title={t.underReview} papers={underReview} linkLabel={t.linkLabel} />
 
