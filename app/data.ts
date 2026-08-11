@@ -95,24 +95,6 @@ export const underReview: Paper[] = [
     tag: "Knowledge Tracing",
   },
   {
-    title: "On the Role of Language Representations in Auto-Bidding: Findings and Implications",
-    authors:
-      "Guanyu Zhu, Jining Luan, Hanwen Du, Xinyu Fang, Sibo Xu, Ersheng Ni, Hongji Li, Jincheng Fang, Ronghao Chen, Huacan Wang, Xuanqi Lan, Yongxin Ni, Yiqi Sun, Youhua Li†",
-    venue: "Under Review",
-    year: "2026",
-    href: "https://arxiv.org/abs/2605.05833",
-    tag: "Auto-Bidding",
-  },
-  {
-    title:
-      "ClinSDT: LLM-Encoded Clinical Semantic Guidance for Sepsis Treatment via Decision Transformer",
-    authors:
-      "Yanyan Wu, Guanyu Zhu, Changbin Zhao, Jin Zhang, Dexu Yu, Tianmin Sun, Jining Luan, Chunxiao Li, Hanwen Du, Youhua Li†",
-    venue: "Under Review",
-    year: "2026",
-    tag: "Decision Intelligence",
-  },
-  {
     title:
       "GIFT: LLM-Guided State-Reward Interface for Financial Reinforcement Learning",
     authors:
@@ -218,6 +200,40 @@ export const underReview: Paper[] = [
 ];
 
 export const publications: Paper[] = [
+  {
+    title: "Risk-Aware Reranking for Agentic Tool Retrieval",
+    authors:
+      "Qinfei Li, Xiaoxuan Dong, Jin Zhang, Dexu Yu, Wenhao Deng, Junchen Fu, Youhua Li, Hanwen Du, Chunxiao Li",
+    venue: "CIKM 2026",
+    year: "2026",
+    tag: "Agentic Tool Retrieval",
+  },
+  {
+    title: "Recommender System as Slow and Fast Thinkers",
+    authors:
+      "Zichen Yuan, Xiaoxuan Dong, Linkun Dai, Jinwei Yang, Jining Luan, Dexu Yu, Chunxiao Li, Joemon Jose, Youhua Li, Hanwen Du, Junchen Fu",
+    venue: "CIKM 2026",
+    year: "2026",
+    tag: "Recommender Systems",
+  },
+  {
+    title:
+      "ClinSDT: LLM-Encoded Clinical Semantic Guidance for Sepsis Treatment via Decision Transformer",
+    authors:
+      "Yanyan Wu, Guanyu Zhu, Changbin Zhao, Jin Zhang, Dexu Yu, Tianmin Sun, Jining Luan, Chunxiao Li, Hanwen Du, Youhua Li†",
+    venue: "CIKM 2026",
+    year: "2026",
+    tag: "Decision Intelligence",
+  },
+  {
+    title: "On the Role of Language Representations in Auto-Bidding: Findings and Implications",
+    authors:
+      "Guanyu Zhu, Jining Luan, Hanwen Du, Xinyu Fang, Sibo Xu, Ersheng Ni, Hongji Li, Jincheng Fang, Ronghao Chen, Huacan Wang, Xuanqi Lan, Yongxin Ni, Yiqi Sun, Youhua Li†",
+    venue: "CIKM 2026",
+    year: "2026",
+    href: "https://arxiv.org/abs/2605.05833",
+    tag: "Auto-Bidding",
+  },
   {
     title:
       "Aligning Human Sense: Calibrated Distributional Reward Learning for Video Generation",

@@ -37,26 +37,41 @@ test("shows exactly one celebratory public news entry on each language page", as
     const html = await readFile(file, "utf8");
     const newsMarkup = html.slice(html.indexOf('id="news"'), html.indexOf('id="research"'));
     assert.equal((newsMarkup.match(/class="news-item"/g) ?? []).length, 1);
-    assert.match(newsMarkup, /Aligning Human Sense: Calibrated Distributional Reward Learning/);
-    assert.match(newsMarkup, /Congratulations, <strong>Nai-Xin Zhai/);
-    assert.equal((newsMarkup.match(/Congratulations, /g) ?? []).length, 1);
+    assert.match(newsMarkup, /Four papers have been accepted to CIKM 2026!/);
+    for (const title of [
+      "Risk-Aware Reranking for Agentic Tool Retrieval",
+      "Recommender System as Slow and Fast Thinkers",
+      "ClinSDT: LLM-Encoded Clinical Semantic Guidance",
+      "On the Role of Language Representations in Auto-Bidding",
+    ]) {
+      assert.match(newsMarkup, new RegExp(title));
+    }
+    assert.match(newsMarkup, /Congratulations to <strong>Qinfei Li, Zichen Yuan, Yanyan Wu, and Guanyu Zhu/);
+    assert.equal((newsMarkup.match(/Congratulations to /g) ?? []).length, 1);
     assert.equal((newsMarkup.match(/class="news-flourish"/g) ?? []).length, 1);
   }
 });
 
-test("keeps the two non-public CIKM submissions under review", async () => {
+test("moves the four accepted CIKM 2026 papers into published work", async () => {
   for (const file of [root, english]) {
     const html = await readFile(file, "utf8");
     const reviewStart = html.indexOf("<h3>Under Review</h3>");
     const publishedStart = html.indexOf("<h3>Published / Accepted</h3>");
-    const autoBidding = html.indexOf("On the Role of Language Representations in Auto-Bidding");
-    const clinSdt = html.indexOf("ClinSDT: LLM-Encoded Clinical Semantic Guidance");
     assert.ok(reviewStart >= 0 && publishedStart > reviewStart);
-    assert.ok(autoBidding > reviewStart && autoBidding < publishedStart);
-    assert.ok(clinSdt > reviewStart && clinSdt < publishedStart);
     const reviewMarkup = html.slice(reviewStart, publishedStart);
-    assert.equal((reviewMarkup.match(/class="paper-item"/g) ?? []).length, 23);
+    const publishedMarkup = html.slice(publishedStart);
+    assert.equal((reviewMarkup.match(/class="paper-item"/g) ?? []).length, 21);
     assert.doesNotMatch(reviewMarkup, /CIKM 2026/);
+    for (const title of [
+      "Risk-Aware Reranking for Agentic Tool Retrieval",
+      "Recommender System as Slow and Fast Thinkers",
+      "ClinSDT: LLM-Encoded Clinical Semantic Guidance",
+      "On the Role of Language Representations in Auto-Bidding",
+    ]) {
+      assert.doesNotMatch(reviewMarkup, new RegExp(title));
+      assert.match(publishedMarkup, new RegExp(title));
+    }
+    assert.equal((publishedMarkup.match(/<em>CIKM 2026<\/em>/g) ?? []).length, 4);
   }
 });
 
@@ -127,7 +142,7 @@ test("uses a non-photographic avatar and keeps all paper metadata in English", a
   assert.match(html, /ECCV/);
   assert.match(html, /Knowledge-Based Systems/);
   assert.match(html, /Operations Research \(Revise &amp; Resubmit\)/);
-  assert.equal((html.match(/class="paper-item"/g) ?? []).length, 39);
+  assert.equal((html.match(/class="paper-item"/g) ?? []).length, 41);
   const visibleProfile = html.slice(
     html.indexOf('<section class="profile"'),
     html.indexOf('<section class="content-section" id="education"'),

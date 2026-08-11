@@ -31,7 +31,7 @@ const copy = {
     navAria: "页面导航",
     avatarAria: "戴学位帽、手持书本的哆啦A梦插画头像",
     newsTitle: "最新动态",
-    newsNote: "最新公开的录用成果",
+    newsNote: "4 篇论文被 CIKM 2026 录用",
     researchTitle: "研究方向",
     researchAreas: [
       ["AI for Operations", "LLM 辅助优化建模、调度策略设计、在线决策、排队网络与强化学习。"],
@@ -146,7 +146,7 @@ const copy = {
     navAria: "Page navigation",
     avatarAria: "Illustrated Doraemon avatar wearing a graduation cap and holding a book",
     newsTitle: "News",
-    newsNote: "Latest public acceptance",
+    newsNote: "Four new CIKM 2026 acceptances",
     researchTitle: "Research",
     researchAreas: [
       ["AI for Operations", "LLM-assisted optimization modeling, scheduling policy design, online decisions, queueing networks, and reinforcement learning."],
@@ -243,12 +243,17 @@ const copy = {
 
 const news = [
   {
-    lead: "Wonderful news!",
-    title: "Aligning Human Sense: Calibrated Distributional Reward Learning for Video Generation",
-    status: "has been accepted to",
-    venue: "ECCV",
+    lead: "Fantastic news!",
+    title: "Four papers have been accepted to CIKM 2026!",
+    papers: [
+      "Risk-Aware Reranking for Agentic Tool Retrieval",
+      "Recommender System as Slow and Fast Thinkers",
+      "ClinSDT: LLM-Encoded Clinical Semantic Guidance for Sepsis Treatment via Decision Transformer",
+      "On the Role of Language Representations in Auto-Bidding: Findings and Implications",
+    ],
+    venue: "CIKM",
     year: "2026",
-    firstAuthor: "Nai-Xin Zhai",
+    firstAuthors: "Qinfei Li, Zichen Yuan, Yanyan Wu, and Guanyu Zhu",
   },
 ];
 
@@ -367,10 +372,12 @@ export function AcademicHome({ locale }: { locale: Locale }) {
                 <div className="news-copy">
                   <p className="news-flourish">{item.lead}</p>
                   <p className="news-sentence">
-                    <span className="news-title">{item.href ? <ExternalLink href={item.href}>{item.title}</ExternalLink> : item.title}</span>
-                    {" "}{item.status} <strong>{item.venue} {item.year}</strong>.
+                    <span className="news-title">{item.title}</span>
                   </p>
-                  <p className="news-congrats">Congratulations, <strong>{item.firstAuthor}</strong>!</p>
+                  <ul className="news-paper-list">
+                    {item.papers.map((paper) => <li key={paper}>{paper}</li>)}
+                  </ul>
+                  <p className="news-congrats">Congratulations to <strong>{item.firstAuthors}</strong>!</p>
                 </div>
                 <div className="news-venue"><span>{item.venue}</span><time>{item.year}</time></div>
               </li>
