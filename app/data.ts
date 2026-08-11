@@ -15,6 +15,8 @@ export const underReview: Paper[] = [
       "Youhua Li, Sibo Xu, Yiqi Sun, Pengfei Guo, Zuojun (Max) Shen, Houmin Yan",
     venue: "Production and Operations Management (Under Review)",
     year: "2026",
+    href:
+      "https://www.researchgate.net/publication/411058050_LLM-Assisted_Scheduling_Policy_Design_and_Refinement_Evidence_Across_Queueing_Networks_Job-Shop_Scheduling_and_Ride-Hailing_Dispatch",
     tag: "Operations",
   },
   {

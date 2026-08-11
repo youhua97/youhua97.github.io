@@ -106,6 +106,7 @@ test("keeps the POMS and OR manuscripts first and includes the two new submissio
     const beyond = reviewMarkup.indexOf("Beyond Uniform Alignment");
     const psi = reviewMarkup.indexOf("PSI-KT: Progressive State Inference for Knowledge Tracing");
     assert.ok(poms >= 0 && or > poms && beyond > or && psi > beyond);
+    assert.match(reviewMarkup, /researchgate\.net\/publication\/411058050_LLM-Assisted_Scheduling_Policy_Design_and_Refinement/);
     assert.match(reviewMarkup, /<strong>Youhua Li†<\/strong>, Yongxin Ni†/);
     assert.doesNotMatch(reviewMarkup, /Youhua Li, et al\./);
   }
