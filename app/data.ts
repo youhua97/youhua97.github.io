@@ -127,16 +127,6 @@ export const underReview: Paper[] = [
   },
   {
     title:
-      "Latent Reward Steering: An Adaptive Inference-Time Framework that Implicitly Promotes Cognitive Behaviors in Reasoning LLMs",
-    authors:
-      "Jiakang Li, Guanyu Zhu, Can Jin, Chenxi Huang, Dexu Yu, Ronghao Chen, Yang Zhou, Hongwu Peng, Xuanqi Lan, Dimitris N. Metaxas†, Youhua Li†",
-    venue: "Under Review",
-    year: "2026",
-    href: "https://arxiv.org/abs/2606.00726",
-    tag: "Reasoning LLMs",
-  },
-  {
-    title:
       "SkillAudit: From Fixed-Suite Benchmarking to Skill-Centered Assessment",
     authors:
       "Dexu Yu*, Youhua Li*, Zhaoyang Guan*, Xianhao Lin*, Jining Luan, Zihao Rao, Xuanqi Lan, Yang Ran, Bo Lan, Nai-Xin Zhai, Hanwen Du, Junchen Fu, Wenhao Deng, Yongxin Ni†, Chunxiao Li†",
@@ -202,6 +192,16 @@ export const underReview: Paper[] = [
 ];
 
 export const publications: Paper[] = [
+  {
+    title:
+      "Latent Reward Steering: An Adaptive Inference-Time Framework that Implicitly Promotes Cognitive Behaviors in Reasoning LLMs",
+    authors:
+      "Jiakang Li, Guanyu Zhu, Can Jin, Chenxi Huang, Dexu Yu, Ronghao Chen, Yang Zhou, Hongwu Peng, Xuanqi Lan, Dimitris N. Metaxas†, Youhua Li†",
+    venue: "Findings of EMNLP 2026",
+    year: "2026",
+    href: "https://arxiv.org/abs/2606.00726",
+    tag: "Reasoning LLMs",
+  },
   {
     title: "Risk-Aware Reranking for Agentic Tool Retrieval",
     authors:

@@ -31,7 +31,7 @@ const copy = {
     navAria: "页面导航",
     avatarAria: "戴学位帽、手持书本的哆啦A梦插画头像",
     newsTitle: "最新动态",
-    newsNote: "4 篇论文被 CIKM 2026 录用",
+    newsNote: "最新录用成果",
     researchTitle: "研究方向",
     researchAreas: [
       ["AI for Operations", "LLM 辅助优化建模、调度策略设计、在线决策、排队网络与强化学习。"],
@@ -146,7 +146,7 @@ const copy = {
     navAria: "Page navigation",
     avatarAria: "Illustrated Doraemon avatar wearing a graduation cap and holding a book",
     newsTitle: "News",
-    newsNote: "Four new CIKM 2026 acceptances",
+    newsNote: "Latest acceptances",
     researchTitle: "Research",
     researchAreas: [
       ["AI for Operations", "LLM-assisted optimization modeling, scheduling policy design, online decisions, queueing networks, and reinforcement learning."],
@@ -242,6 +242,14 @@ const copy = {
 };
 
 const news = [
+  {
+    lead: "Wonderful news!",
+    title: "Latent Reward Steering has been accepted to Findings of EMNLP 2026!",
+    href: "https://arxiv.org/abs/2606.00726",
+    venue: "EMNLP Findings",
+    year: "2026",
+    firstAuthors: "Jiakang Li",
+  },
   {
     lead: "Fantastic news!",
     title: "Four papers have been accepted to CIKM 2026!",
@@ -372,11 +380,13 @@ export function AcademicHome({ locale }: { locale: Locale }) {
                 <div className="news-copy">
                   <p className="news-flourish">{item.lead}</p>
                   <p className="news-sentence">
-                    <span className="news-title">{item.title}</span>
+                    <span className="news-title">{"href" in item ? <ExternalLink href={item.href}>{item.title}</ExternalLink> : item.title}</span>
                   </p>
-                  <ul className="news-paper-list">
-                    {item.papers.map((paper) => <li key={paper}>{paper}</li>)}
-                  </ul>
+                  {"papers" in item ? (
+                    <ul className="news-paper-list">
+                      {item.papers.map((paper) => <li key={paper}>{paper}</li>)}
+                    </ul>
+                  ) : null}
                   <p className="news-congrats">Congratulations to <strong>{item.firstAuthors}</strong>!</p>
                 </div>
                 <div className="news-venue"><span>{item.venue}</span><time>{item.year}</time></div>

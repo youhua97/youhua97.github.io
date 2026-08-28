@@ -32,11 +32,14 @@ test("exports the matching complete English single-page homepage", async () => {
   assert.doesNotMatch(html, /Honors &amp; Awards/);
 });
 
-test("shows exactly one celebratory public news entry on each language page", async () => {
+test("shows the new EMNLP Findings news while preserving the CIKM news", async () => {
   for (const file of [root, english]) {
     const html = await readFile(file, "utf8");
     const newsMarkup = html.slice(html.indexOf('id="news"'), html.indexOf('id="research"'));
-    assert.equal((newsMarkup.match(/class="news-item"/g) ?? []).length, 1);
+    assert.equal((newsMarkup.match(/class="news-item"/g) ?? []).length, 2);
+    assert.match(newsMarkup, /Latent Reward Steering has been accepted to Findings of EMNLP 2026!/);
+    assert.match(newsMarkup, /Congratulations to <strong>Jiakang Li/);
+    assert.match(newsMarkup, /https:\/\/arxiv\.org\/abs\/2606\.00726/);
     assert.match(newsMarkup, /Four papers have been accepted to CIKM 2026!/);
     for (const title of [
       "Risk-Aware Reranking for Agentic Tool Retrieval",
@@ -47,8 +50,8 @@ test("shows exactly one celebratory public news entry on each language page", as
       assert.match(newsMarkup, new RegExp(title));
     }
     assert.match(newsMarkup, /Congratulations to <strong>Qinfei Li, Zichen Yuan, Yanyan Wu, and Guanyu Zhu/);
-    assert.equal((newsMarkup.match(/Congratulations to /g) ?? []).length, 1);
-    assert.equal((newsMarkup.match(/class="news-flourish"/g) ?? []).length, 1);
+    assert.equal((newsMarkup.match(/Congratulations to /g) ?? []).length, 2);
+    assert.equal((newsMarkup.match(/class="news-flourish"/g) ?? []).length, 2);
   }
 });
 
@@ -60,7 +63,7 @@ test("moves the four accepted CIKM 2026 papers into published work", async () =>
     assert.ok(reviewStart >= 0 && publishedStart > reviewStart);
     const reviewMarkup = html.slice(reviewStart, publishedStart);
     const publishedMarkup = html.slice(publishedStart);
-    assert.equal((reviewMarkup.match(/class="paper-item"/g) ?? []).length, 21);
+    assert.equal((reviewMarkup.match(/class="paper-item"/g) ?? []).length, 20);
     assert.doesNotMatch(reviewMarkup, /CIKM 2026/);
     for (const title of [
       "Risk-Aware Reranking for Agentic Tool Retrieval",
@@ -72,6 +75,20 @@ test("moves the four accepted CIKM 2026 papers into published work", async () =>
       assert.match(publishedMarkup, new RegExp(title));
     }
     assert.equal((publishedMarkup.match(/<em>CIKM 2026<\/em>/g) ?? []).length, 4);
+  }
+});
+
+test("moves Latent Reward Steering from under review to Findings of EMNLP 2026", async () => {
+  for (const file of [root, english]) {
+    const html = await readFile(file, "utf8");
+    const reviewStart = html.indexOf("<h3>Under Review</h3>");
+    const publishedStart = html.indexOf("<h3>Published / Accepted</h3>");
+    const reviewMarkup = html.slice(reviewStart, publishedStart);
+    const publishedMarkup = html.slice(publishedStart);
+    assert.doesNotMatch(reviewMarkup, /Latent Reward Steering/);
+    assert.match(publishedMarkup, /Latent Reward Steering/);
+    assert.match(publishedMarkup, /<em>Findings of EMNLP 2026<\/em>/);
+    assert.match(publishedMarkup, /https:\/\/arxiv\.org\/abs\/2606\.00726/);
   }
 });
 
