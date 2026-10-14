@@ -21,12 +21,52 @@ export const underReview: Paper[] = [
   },
   {
     title:
+      "Execution Authority in Digital Advertising: Coordinating Autobidding and Campaign Control",
+    authors:
+      "Youhua Li, Yiqi Sun, Chang Liu, Zuojun (Max) Shen, Houmin Yan",
+    venue: "Production and Operations Management (Under Review)",
+    year: "2026",
+  },
+  {
+    title:
       "Principled Inference-Time Scaling: A Unified Framework for LLM-Based Optimization Modeling",
-    authors: "Youhua Li*, Yiqi Sun*, Zuojun (Max) Shen, Houmin Yan",
+    authors: "Yiqi Sun*, Youhua Li*, Zuojun (Max) Shen, Houmin Yan",
     venue: "Operations Research (Revise & Resubmit)",
     year: "2026",
     href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6562298",
     tag: "Optimization Modeling",
+  },
+  {
+    title:
+      "Beyond Uncertainty Reduction: Calibrated Planning for Interactive Diagnosis",
+    authors:
+      "Yue Zhou, Haiyang Zhou, Jin Zhang, Kong Wang, Zihao Rao, Maolin Mao, Hanwen Du, Youhua Li",
+    venue: "Under Review",
+    year: "2026",
+  },
+  {
+    title:
+      "From Relevance to Validity: Zero-Shot Tool Selection via Functional and Contextual Validation",
+    authors:
+      "Xiaoxuan Dong, Jin Zhang, Zichen Yuan, Yue Zhou, Zihao Rao, Dexu Yu, Tingyong Wu, Wenhao Deng, Junchen Fu, Pengwei Sun, Yang Ran, Bo Lan, Yongxin Ni, Youhua Li",
+    venue: "Under Review",
+    year: "2026",
+  },
+  {
+    title: "Chain of Mindset: Reasoning with Adaptive Cognitive Modes",
+    authors:
+      "Tianyi Jiang, Richuan An, Hengyi Feng, Naixin Zhai, Haodong Li, Xiaomin Yu, Jiahui Liu, Hanwen Du, Shuo Zhang, Zhi Yang, Jie Huang, Yifan Zhou, Yongxin Ni, Youhua Li, Huacan Wang, Ronghao Chen",
+    venue: "Under Review",
+    year: "2026",
+    href: "https://arxiv.org/abs/2602.10063",
+  },
+  {
+    title:
+      "Depth as a Candidate Source: Portfolio Allocation for Recurrent Test-Time Scaling in Large Language Models",
+    authors:
+      "Chaoyuan Hao, Wentao Yue, Yanyan Wu, Boyuan Gao, Tianyou Lai, Maolin Wang, Yongxin Ni, Hanwen Du, Youhua Li",
+    venue: "Under Review",
+    year: "2026",
   },
   {
     title:
@@ -92,7 +132,7 @@ export const underReview: Paper[] = [
       "SMKT-LLM: Semantic Mapping for Knowledge Tracing with Large Language Models",
     authors:
       "Jiaxin Wang, Ersheng Ni, Hanwen Du, Sibo Xu, Jining Luan, Hao Zeng, Shuyan Xiong, Weihua Cheng, Chengzhi Xie, Yongxin Ni, Youhua Li†",
-    venue: "Under Review",
+    venue: "Knowledge-Based Systems (Under Review)",
     year: "2026",
     tag: "Knowledge Tracing",
   },
@@ -127,9 +167,9 @@ export const underReview: Paper[] = [
   },
   {
     title:
-      "SkillAudit: From Fixed-Suite Benchmarking to Skill-Centered Assessment",
+      "SkillPortrait: From Task-First Benchmarking to Skill-Centered Assessment of LLM Agent Skills",
     authors:
-      "Dexu Yu*, Youhua Li*, Zhaoyang Guan*, Xianhao Lin*, Jining Luan, Zihao Rao, Xuanqi Lan, Yang Ran, Bo Lan, Nai-Xin Zhai, Hanwen Du, Junchen Fu, Wenhao Deng, Yongxin Ni†, Chunxiao Li†",
+      "Dexu Yu, Zhaoyang Guan, Xianhao Lin, Jining Luan, Zihao Rao, Xuanqi Lan, Yang Ran, Bo Lan, Naixin Zhai, Hanwen Du, Junchen Fu, Wenhao Deng, Yongxin Ni, Youhua Li",
     venue: "Under Review",
     year: "2026",
     href: "https://arxiv.org/abs/2606.22613",
