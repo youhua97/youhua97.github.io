@@ -63,7 +63,7 @@ test("moves the four accepted CIKM 2026 papers into published work", async () =>
     assert.ok(reviewStart >= 0 && publishedStart > reviewStart);
     const reviewMarkup = html.slice(reviewStart, publishedStart);
     const publishedMarkup = html.slice(publishedStart);
-    assert.equal((reviewMarkup.match(/class="paper-item"/g) ?? []).length, 20);
+    assert.equal((reviewMarkup.match(/class="paper-item"/g) ?? []).length, 25);
     assert.doesNotMatch(reviewMarkup, /CIKM 2026/);
     for (const title of [
       "Risk-Aware Reranking for Agentic Tool Retrieval",
@@ -92,7 +92,7 @@ test("moves Latent Reward Steering from under review to Findings of EMNLP 2026",
   }
 });
 
-test("includes the added submissions without exposing their target venues", async () => {
+test("includes the added submissions and the supplied KBS submission metadata", async () => {
   for (const file of [root, english]) {
     const html = await readFile(file, "utf8");
     const reviewStart = html.indexOf("<h3>Under Review</h3>");
@@ -108,7 +108,12 @@ test("includes the added submissions without exposing their target venues", asyn
     ]) {
       assert.match(reviewMarkup, new RegExp(title));
     }
-    assert.doesNotMatch(reviewMarkup, /AAAI 2027|Knowledge-Based Systems/);
+    assert.doesNotMatch(reviewMarkup, /AAAI 2027/);
+    const smktStart = reviewMarkup.indexOf("<h4>SMKT-LLM:");
+    const smktEnd = reviewMarkup.indexOf('</li>', smktStart);
+    const smktMarkup = reviewMarkup.slice(smktStart, smktEnd);
+    assert.match(smktMarkup, /Knowledge-Based Systems \(Under Review\)/);
+    assert.match(smktMarkup, /<strong>Youhua Li†<\/strong>/);
   }
 });
 
@@ -120,9 +125,15 @@ test("keeps the POMS and OR manuscripts first and includes the two new submissio
     const reviewMarkup = html.slice(reviewStart, publishedStart);
     const poms = reviewMarkup.indexOf("LLM-Assisted Scheduling Policy Design and Refinement");
     const or = reviewMarkup.indexOf("Principled Inference-Time Scaling");
+    const advertising = reviewMarkup.indexOf("Execution Authority in Digital Advertising: Coordinating Autobidding and Campaign Control");
     const beyond = reviewMarkup.indexOf("Beyond Uniform Alignment");
     const psi = reviewMarkup.indexOf("PSI-KT: Progressive State Inference for Knowledge Tracing");
-    assert.ok(poms >= 0 && or > poms && beyond > or && psi > beyond);
+    assert.ok(poms >= 0 && advertising > poms && or > advertising && beyond > or && psi > beyond);
+    const advertisingMarkup = reviewMarkup.slice(advertising, reviewMarkup.indexOf('</li>', advertising));
+    assert.match(advertisingMarkup, /<strong>Youhua Li<\/strong>, Yiqi Sun, Chang Liu, Zuojun \(Max\) Shen, Houmin Yan/);
+    assert.match(advertisingMarkup, /Production and Operations Management \(Under Review\)/);
+    const orMarkup = reviewMarkup.slice(or, reviewMarkup.indexOf('</li>', or));
+    assert.match(orMarkup, /Yiqi Sun\*, <strong>Youhua Li\*<\/strong>, Zuojun \(Max\) Shen, Houmin Yan/);
     assert.match(reviewMarkup, /researchgate\.net\/publication\/411058050_LLM-Assisted_Scheduling_Policy_Design_and_Refinement/);
     assert.match(reviewMarkup, /<strong>Youhua Li†<\/strong>, Yongxin Ni†/);
     assert.doesNotMatch(reviewMarkup, /Youhua Li, et al\./);
@@ -160,7 +171,7 @@ test("uses a non-photographic avatar and keeps all paper metadata in English", a
   assert.match(html, /ECCV/);
   assert.match(html, /Knowledge-Based Systems/);
   assert.match(html, /Operations Research \(Revise &amp; Resubmit\)/);
-  assert.equal((html.match(/class="paper-item"/g) ?? []).length, 41);
+  assert.equal((html.match(/class="paper-item"/g) ?? []).length, 46);
   const visibleProfile = html.slice(
     html.indexOf('<section class="profile"'),
     html.indexOf('<section class="content-section" id="education"'),
