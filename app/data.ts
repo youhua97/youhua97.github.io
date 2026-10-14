@@ -38,6 +38,36 @@ export const underReview: Paper[] = [
   },
   {
     title:
+      "α-Routing: Test-Time Skill Adaptation for Trading Agents via Counterfactual Valuation",
+    authors: "Yixuan Zhang, Sixu Chen, Boyi Zhang, Yongxin Ni, Youhua Li†",
+    venue: "Knowledge-Based Systems (Under Review)",
+    year: "2026",
+  },
+  {
+    title:
+      "SVAR: Semantics-Preserving Verification and Alignment Resolution for LLM-Based Clinical Field Alignment",
+    authors:
+      "Ke Yan, Zhe Chen, Jining Luan, Youhua Li, Kerun Zhou, Jinchuan Zhang",
+    venue: "Under Review",
+    year: "2026",
+  },
+  {
+    title:
+      "Diagnose, Then Allocate: Separating Language Reasoning from Portfolio Execution",
+    authors:
+      "Yanlin Liu, Xinyu Fang, Yanyan Wu, Boyi Zhang, Guanyu Zhu, Zhehao Yu, Ye Chen, Hanwen Du, Yongxin Ni, Youhua Li",
+    venue: "Under Review",
+    year: "2026",
+  },
+  {
+    title: "FinMemRec: Dynamic Agent Memory for Financial Recommendation",
+    authors:
+      "Jin Zhang, Hao Zeng, Xingyu Fang, Kerun Zhou, Binhua Xu, Zhe Chen, Jiaxin Wang, Hanwen Du, Youhua Li",
+    venue: "Under Review",
+    year: "2026",
+  },
+  {
+    title:
       "Beyond Uncertainty Reduction: Calibrated Planning for Interactive Diagnosis",
     authors:
       "Yue Zhou, Haiyang Zhou, Jin Zhang, Kong Wang, Zihao Rao, Maolin Mao, Hanwen Du, Youhua Li",
