@@ -122,7 +122,7 @@ const copy = {
       ["Workshops", "DCAI Workshop at WWW 2024"],
     ],
     contact: "欢迎就相关研究与合作通过邮件联系。",
-    updated: "Last updated: August 2026",
+    updated: "Last updated: October 2026",
   },
   en: {
     pageLabel: "Academic homepage of Youhua Li",
@@ -237,7 +237,7 @@ const copy = {
       ["Workshops", "DCAI Workshop at WWW 2024"],
     ],
     contact: "I welcome conversations about related research and collaboration.",
-    updated: "Last updated: August 2026",
+    updated: "Last updated: October 2026",
   },
 };
 
