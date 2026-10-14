@@ -63,7 +63,7 @@ test("moves the four accepted CIKM 2026 papers into published work", async () =>
     assert.ok(reviewStart >= 0 && publishedStart > reviewStart);
     const reviewMarkup = html.slice(reviewStart, publishedStart);
     const publishedMarkup = html.slice(publishedStart);
-    assert.equal((reviewMarkup.match(/class="paper-item"/g) ?? []).length, 25);
+    assert.equal((reviewMarkup.match(/class="paper-item"/g) ?? []).length, 29);
     assert.doesNotMatch(reviewMarkup, /CIKM 2026/);
     for (const title of [
       "Risk-Aware Reranking for Agentic Tool Retrieval",
@@ -105,10 +105,24 @@ test("includes the added submissions and the supplied KBS submission metadata", 
       "EVE-Bench: Entropy-Guided Benchmarking",
       "Adaptive Hypercomplex Embeddings for Efficient and Expressive Recommender Systems",
       "SMKT-LLM: Semantic Mapping for Knowledge Tracing with Large Language Models",
+      "α-Routing: Test-Time Skill Adaptation for Trading Agents via Counterfactual Valuation",
+      "SVAR: Semantics-Preserving Verification and Alignment Resolution for LLM-Based Clinical Field Alignment",
+      "Diagnose, Then Allocate: Separating Language Reasoning from Portfolio Execution",
+      "FinMemRec: Dynamic Agent Memory for Financial Recommendation",
     ]) {
       assert.match(reviewMarkup, new RegExp(title));
     }
     assert.doesNotMatch(reviewMarkup, /AAAI 2027/);
+    assert.doesNotMatch(reviewMarkup, /ICASSP/i);
+    for (const title of ["SVAR:", "Diagnose, Then Allocate:", "FinMemRec:"]) {
+      const start = reviewMarkup.indexOf(`<h4>${title}`);
+      const paperMarkup = reviewMarkup.slice(start, reviewMarkup.indexOf('</li>', start));
+      assert.match(paperMarkup, /<em>Under Review<\/em>/);
+    }
+    const alphaStart = reviewMarkup.indexOf("<h4>α-Routing:");
+    const alphaMarkup = reviewMarkup.slice(alphaStart, reviewMarkup.indexOf('</li>', alphaStart));
+    assert.match(alphaMarkup, /Knowledge-Based Systems \(Under Review\)/);
+    assert.match(alphaMarkup, /Yixuan Zhang, Sixu Chen, Boyi Zhang, Yongxin Ni, <strong>Youhua Li†<\/strong>/);
     const smktStart = reviewMarkup.indexOf("<h4>SMKT-LLM:");
     const smktEnd = reviewMarkup.indexOf('</li>', smktStart);
     const smktMarkup = reviewMarkup.slice(smktStart, smktEnd);
@@ -171,7 +185,7 @@ test("uses a non-photographic avatar and keeps all paper metadata in English", a
   assert.match(html, /ECCV/);
   assert.match(html, /Knowledge-Based Systems/);
   assert.match(html, /Operations Research \(Revise &amp; Resubmit\)/);
-  assert.equal((html.match(/class="paper-item"/g) ?? []).length, 46);
+  assert.equal((html.match(/class="paper-item"/g) ?? []).length, 50);
   const visibleProfile = html.slice(
     html.indexOf('<section class="profile"'),
     html.indexOf('<section class="content-section" id="education"'),
