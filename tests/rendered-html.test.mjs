@@ -121,7 +121,8 @@ test("includes the added submissions and the supplied KBS submission metadata", 
     }
     const alphaStart = reviewMarkup.indexOf("<h4>α-Routing:");
     const alphaMarkup = reviewMarkup.slice(alphaStart, reviewMarkup.indexOf('</li>', alphaStart));
-    assert.match(alphaMarkup, /Knowledge-Based Systems \(Under Review\)/);
+    assert.match(alphaMarkup, /<em>\(Under Review\)<\/em>/);
+    assert.doesNotMatch(alphaMarkup, /Knowledge-Based Systems/);
     assert.match(alphaMarkup, /Yixuan Zhang, Sixu Chen, Boyi Zhang, Yongxin Ni, <strong>Youhua Li†<\/strong>/);
     const smktStart = reviewMarkup.indexOf("<h4>SMKT-LLM:");
     const smktEnd = reviewMarkup.indexOf('</li>', smktStart);
