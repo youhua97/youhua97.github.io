@@ -143,6 +143,9 @@ test("keeps the POMS and OR manuscripts first and includes the two new submissio
     const beyond = reviewMarkup.indexOf("Beyond Uniform Alignment");
     const psi = reviewMarkup.indexOf("PSI-KT: Progressive State Inference for Knowledge Tracing");
     assert.ok(poms >= 0 && advertising > poms && or > advertising && beyond > or && psi > beyond);
+    const schedulingMarkup = reviewMarkup.slice(poms, reviewMarkup.indexOf('</li>', poms));
+    assert.match(schedulingMarkup, /Production and Operations Management \(Reject and Resubmit\)/);
+    assert.doesNotMatch(reviewMarkup, /Revise &amp; Resubmit/);
     const advertisingMarkup = reviewMarkup.slice(advertising, reviewMarkup.indexOf('</li>', advertising));
     assert.match(advertisingMarkup, /<strong>Youhua Li<\/strong>, Yiqi Sun, Chang Liu, Zuojun \(Max\) Shen, Houmin Yan/);
     assert.match(advertisingMarkup, /Production and Operations Management \(Under Review\)/);
@@ -184,7 +187,7 @@ test("uses a non-photographic avatar and keeps all paper metadata in English", a
   assert.match(html, /CIKM/);
   assert.match(html, /ECCV/);
   assert.match(html, /Knowledge-Based Systems/);
-  assert.match(html, /Operations Research \(Revise &amp; Resubmit\)/);
+  assert.match(html, /Operations Research \(Reject and Resubmit\)/);
   assert.equal((html.match(/class="paper-item"/g) ?? []).length, 50);
   const visibleProfile = html.slice(
     html.indexOf('<section class="profile"'),
