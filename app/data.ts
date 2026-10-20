@@ -40,7 +40,7 @@ export const underReview: Paper[] = [
     title:
       "α-Routing: Test-Time Skill Adaptation for Trading Agents via Counterfactual Valuation",
     authors: "Yixuan Zhang, Sixu Chen, Boyi Zhang, Yongxin Ni, Youhua Li†",
-    venue: "Knowledge-Based Systems (Under Review)",
+    venue: "(Under Review)",
     year: "2026",
   },
   {
