@@ -13,7 +13,7 @@ export const underReview: Paper[] = [
       "LLM-Assisted Scheduling Policy Design and Refinement: Evidence Across Queueing Networks, Job-Shop Scheduling, and Ride-Hailing Dispatch",
     authors:
       "Youhua Li, Sibo Xu, Yiqi Sun, Pengfei Guo, Zuojun (Max) Shen, Houmin Yan",
-    venue: "Production and Operations Management (Under Review)",
+    venue: "Production and Operations Management (Reject and Resubmit)",
     year: "2026",
     href:
       "https://www.researchgate.net/publication/411058050_LLM-Assisted_Scheduling_Policy_Design_and_Refinement_Evidence_Across_Queueing_Networks_Job-Shop_Scheduling_and_Ride-Hailing_Dispatch",
@@ -31,7 +31,7 @@ export const underReview: Paper[] = [
     title:
       "Principled Inference-Time Scaling: A Unified Framework for LLM-Based Optimization Modeling",
     authors: "Yiqi Sun*, Youhua Li*, Zuojun (Max) Shen, Houmin Yan",
-    venue: "Operations Research (Revise & Resubmit)",
+    venue: "Operations Research (Reject and Resubmit)",
     year: "2026",
     href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6562298",
     tag: "Optimization Modeling",
