@@ -269,7 +269,7 @@ export const publications: Paper[] = [
     title:
       "Dual-Timescale LLM-Guided Manager-Worker Reinforcement Learning for Ride-Hailing Dispatching and Repositioning",
     authors:
-      "Yuting Pang, Xinyu Fang, Yichen Wu, Xiaoxuan Dong, Kong Wang, Tianmin Sun, Sibo Xu, Hao Zeng, Dexu Yu, Jining Luan, Chunxiao Li, Hanwen Du, Youhua Li†",
+      "Xinyu Fang, Yuting Pang, Yichen Wu, Xiaoxuan Dong, Kong Wang, Tianmin Sun, Hao Zeng, Dexu Yu, Hanwen Du, Youhua Li†",
     venue: "WSDM Findings (Accepted)",
     year: "2026",
     tag: "Mobility",
