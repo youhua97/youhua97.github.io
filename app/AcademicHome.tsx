@@ -244,24 +244,10 @@ const copy = {
 const news = [
   {
     lead: "Wonderful news!",
-    title: "Latent Reward Steering has been accepted to Findings of EMNLP 2026!",
-    href: "https://arxiv.org/abs/2606.00726",
-    venue: "EMNLP Findings",
+    title: "Dual-Timescale LLM-Guided Manager-Worker Reinforcement Learning for Ride-Hailing Dispatching and Repositioning has been accepted to WSDM Findings!",
+    venue: "WSDM Findings",
     year: "2026",
-    firstAuthors: "Jiakang Li",
-  },
-  {
-    lead: "Fantastic news!",
-    title: "Four papers have been accepted to CIKM 2026!",
-    papers: [
-      "Risk-Aware Reranking for Agentic Tool Retrieval",
-      "Recommender System as Slow and Fast Thinkers",
-      "ClinSDT: LLM-Encoded Clinical Semantic Guidance for Sepsis Treatment via Decision Transformer",
-      "On the Role of Language Representations in Auto-Bidding: Findings and Implications",
-    ],
-    venue: "CIKM",
-    year: "2026",
-    firstAuthors: "Qinfei Li, Zichen Yuan, Yanyan Wu, and Guanyu Zhu",
+    firstAuthors: "Yuting Pang",
   },
 ];
 
@@ -380,13 +366,8 @@ export function AcademicHome({ locale }: { locale: Locale }) {
                 <div className="news-copy">
                   <p className="news-flourish">{item.lead}</p>
                   <p className="news-sentence">
-                    <span className="news-title">{"href" in item ? <ExternalLink href={item.href}>{item.title}</ExternalLink> : item.title}</span>
+                    <span className="news-title">{item.title}</span>
                   </p>
-                  {"papers" in item ? (
-                    <ul className="news-paper-list">
-                      {item.papers.map((paper) => <li key={paper}>{paper}</li>)}
-                    </ul>
-                  ) : null}
                   <p className="news-congrats">Congratulations to <strong>{item.firstAuthors}</strong>!</p>
                 </div>
                 <div className="news-venue"><span>{item.venue}</span><time>{item.year}</time></div>
