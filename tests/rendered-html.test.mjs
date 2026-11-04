@@ -32,26 +32,15 @@ test("exports the matching complete English single-page homepage", async () => {
   assert.doesNotMatch(html, /Honors &amp; Awards/);
 });
 
-test("shows the new EMNLP Findings news while preserving the CIKM news", async () => {
+test("shows only the WSDM acceptance news dated 2026", async () => {
   for (const file of [root, english]) {
     const html = await readFile(file, "utf8");
     const newsMarkup = html.slice(html.indexOf('id="news"'), html.indexOf('id="research"'));
-    assert.equal((newsMarkup.match(/class="news-item"/g) ?? []).length, 2);
-    assert.match(newsMarkup, /Latent Reward Steering has been accepted to Findings of EMNLP 2026!/);
-    assert.match(newsMarkup, /Congratulations to <strong>Jiakang Li/);
-    assert.match(newsMarkup, /https:\/\/arxiv\.org\/abs\/2606\.00726/);
-    assert.match(newsMarkup, /Four papers have been accepted to CIKM 2026!/);
-    for (const title of [
-      "Risk-Aware Reranking for Agentic Tool Retrieval",
-      "Recommender System as Slow and Fast Thinkers",
-      "ClinSDT: LLM-Encoded Clinical Semantic Guidance",
-      "On the Role of Language Representations in Auto-Bidding",
-    ]) {
-      assert.match(newsMarkup, new RegExp(title));
-    }
-    assert.match(newsMarkup, /Congratulations to <strong>Qinfei Li, Zichen Yuan, Yanyan Wu, and Guanyu Zhu/);
-    assert.equal((newsMarkup.match(/Congratulations to /g) ?? []).length, 2);
-    assert.equal((newsMarkup.match(/class="news-flourish"/g) ?? []).length, 2);
+    assert.equal((newsMarkup.match(/class="news-item"/g) ?? []).length, 1);
+    assert.match(newsMarkup, /has been accepted to WSDM Findings!/);
+    assert.match(newsMarkup, /<time>2026<\/time>/);
+    assert.doesNotMatch(newsMarkup, /CIKM|EMNLP|Latent Reward Steering|2027/);
+    assert.match(html, /WSDM Findings \(Accepted\)/);
   }
 });
 
