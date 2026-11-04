@@ -247,7 +247,7 @@ const news = [
     title: "Dual-Timescale LLM-Guided Manager-Worker Reinforcement Learning for Ride-Hailing Dispatching and Repositioning has been accepted to WSDM Findings!",
     venue: "WSDM Findings",
     year: "2026",
-    firstAuthors: "Yuting Pang",
+    firstAuthors: "Xinyu Fang",
   },
 ];
 
