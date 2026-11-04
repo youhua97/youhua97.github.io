@@ -9,6 +9,18 @@ export type Paper = {
 
 export const underReview: Paper[] = [
   {
+    title: "Spherical Smoothness Priors for Separating Extremes from High-Rank Climate Fields",
+    authors: "Maolin Wang, Hongyu Chen, Shuhua Yang, Youhua Li, Chaoning Zhang, Hing Cheung So, Haoxuan Li, Zhouchen Lin",
+    venue: "IEEE Transactions on Pattern Analysis and Machine Intelligence (Under Review)",
+    year: "2026",
+  },
+  {
+    title: "Reliability Budgeting for Lattice Surgery",
+    authors: "Maolin Wang, Youhua Li, Haoran Yang",
+    venue: "(Under Review)",
+    year: "2026",
+  },
+  {
     title:
       "LLM-Assisted Scheduling Policy Design and Refinement: Evidence Across Queueing Networks, Job-Shop Scheduling, and Ride-Hailing Dispatch",
     authors:
@@ -162,7 +174,7 @@ export const underReview: Paper[] = [
       "SMKT-LLM: Semantic Mapping for Knowledge Tracing with Large Language Models",
     authors:
       "Jiaxin Wang, Ersheng Ni, Hanwen Du, Sibo Xu, Jining Luan, Hao Zeng, Shuyan Xiong, Weihua Cheng, Chengzhi Xie, Yongxin Ni, Youhua Li†",
-    venue: "Knowledge-Based Systems (Under Review)",
+    venue: "(Under Review)",
     year: "2026",
     tag: "Knowledge Tracing",
   },
@@ -175,15 +187,6 @@ export const underReview: Paper[] = [
     year: "2026",
     href: "https://arxiv.org/abs/2606.08450",
     tag: "FinTech",
-  },
-  {
-    title:
-      "Dual-Timescale LLM-Guided Manager-Worker Reinforcement Learning for Ride-Hailing Dispatching and Repositioning",
-    authors:
-      "Yuting Pang, Xinyu Fang, Yichen Wu, Xiaoxuan Dong, Kong Wang, Tianmin Sun, Sibo Xu, Hao Zeng, Dexu Yu, Jining Luan, Chunxiao Li, Hanwen Du, Youhua Li†",
-    venue: "Under Review",
-    year: "2026",
-    tag: "Mobility",
   },
   {
     title:
@@ -262,6 +265,16 @@ export const underReview: Paper[] = [
 ];
 
 export const publications: Paper[] = [
+  {
+    title:
+      "Dual-Timescale LLM-Guided Manager-Worker Reinforcement Learning for Ride-Hailing Dispatching and Repositioning",
+    authors:
+      "Yuting Pang, Xinyu Fang, Yichen Wu, Xiaoxuan Dong, Kong Wang, Tianmin Sun, Sibo Xu, Hao Zeng, Dexu Yu, Jining Luan, Chunxiao Li, Hanwen Du, Youhua Li†",
+    venue: "WSDM 2027 Findings (Accepted)",
+    year: "2027",
+    tag: "Mobility",
+  },
+
   {
     title:
       "Latent Reward Steering: An Adaptive Inference-Time Framework that Implicitly Promotes Cognitive Behaviors in Reasoning LLMs",
