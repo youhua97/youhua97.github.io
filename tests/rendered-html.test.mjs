@@ -52,7 +52,7 @@ test("moves the four accepted CIKM 2026 papers into published work", async () =>
     assert.ok(reviewStart >= 0 && publishedStart > reviewStart);
     const reviewMarkup = html.slice(reviewStart, publishedStart);
     const publishedMarkup = html.slice(publishedStart);
-    assert.equal((reviewMarkup.match(/class="paper-item"/g) ?? []).length, 30);
+    assert.equal((reviewMarkup.match(/class="paper-item"/g) ?? []).length, 29);
     assert.doesNotMatch(reviewMarkup, /CIKM 2026/);
     for (const title of [
       "Risk-Aware Reranking for Agentic Tool Retrieval",
