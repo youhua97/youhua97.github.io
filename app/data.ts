@@ -236,16 +236,6 @@ export const underReview: Paper[] = [
   },
   {
     title:
-      "PhysicsMind: Sim and Real Mechanics Benchmarking for Physical Reasoning and Prediction in Foundational VLMs and World Models",
-    authors:
-      "Chak-Wing Mak, Guanyu Zhu, Boyi Zhang, Hongji Li, Xiaowei Chi, Kevin Zhang, Yangfan He, Chun-Kai Fan, Wentao Lu, Kuangzhi Ge, Xinyu Fang, Hongyang He, Kuan Lu, Tianxiang Xu, Yongxin Ni, Youhua Li, Shanghang Zhang†",
-    venue: "Under Review",
-    year: "2026",
-    href: "https://arxiv.org/abs/2601.16007",
-    tag: "World Models",
-  },
-  {
-    title:
       "A Meta-Optimization Framework for Prompt Optimization via Search Trajectory Learning",
     authors:
       "Sibo Xu, Ersheng Ni, Jiaxin Wang, Weihua Cheng, Yuling Wu, Joseph Liu, Jiayi Zhang, Jincheng Fang, Yiqi Sun, Yongxin Ni, Youhua Li†",
@@ -265,6 +255,17 @@ export const underReview: Paper[] = [
 ];
 
 export const publications: Paper[] = [
+  {
+    title:
+      "PhysicsMind: Sim and Real Mechanics Benchmarking for Physical Reasoning and Prediction in Foundational VLMs and World Models",
+    authors:
+      "Chak-Wing Mak, Guanyu Zhu, Boyi Zhang, Hongji Li, Kevin Zhang, Xiaowei Chi, Yichen Wu, Yangfan He, Chun-Kai Fan, Wentao Lu, Kuangzhi Ge, Xinyu Fang, Hongyang He, Kuan Lu, Li Zhang, Yongxin Ni, Zhanhua Zhang, Youhua Li, Shanghang Zhang†",
+    venue: "CoRL 2026 Workshop TAG (Accepted)",
+    year: "2026",
+    href: "https://openreview.net/forum?id=aJaH4nEfmC",
+    tag: "World Models",
+  },
+
   {
     title:
       "Dual-Timescale LLM-Guided Manager-Worker Reinforcement Learning for Ride-Hailing Dispatching and Repositioning",
