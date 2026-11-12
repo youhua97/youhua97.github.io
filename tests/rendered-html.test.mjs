@@ -52,7 +52,7 @@ test("moves the four accepted CIKM 2026 papers into published work", async () =>
     assert.ok(reviewStart >= 0 && publishedStart > reviewStart);
     const reviewMarkup = html.slice(reviewStart, publishedStart);
     const publishedMarkup = html.slice(publishedStart);
-    assert.equal((reviewMarkup.match(/class="paper-item"/g) ?? []).length, 29);
+    assert.equal((reviewMarkup.match(/class="paper-item"/g) ?? []).length, 32);
     assert.doesNotMatch(reviewMarkup, /CIKM 2026/);
     for (const title of [
       "Risk-Aware Reranking for Agentic Tool Retrieval",
@@ -179,7 +179,7 @@ test("uses a non-photographic avatar and keeps all paper metadata in English", a
   assert.match(html, /ECCV/);
   assert.match(html, /Knowledge-Based Systems/);
   assert.match(html, /Operations Research \(Reject and Resubmit\)/);
-  assert.equal((html.match(/class="paper-item"/g) ?? []).length, 52);
+  assert.equal((html.match(/class="paper-item"/g) ?? []).length, 55);
   const visibleProfile = html.slice(
     html.indexOf('<section class="profile"'),
     html.indexOf('<section class="content-section" id="education"'),
