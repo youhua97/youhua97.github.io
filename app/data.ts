@@ -9,6 +9,24 @@ export type Paper = {
 
 export const underReview: Paper[] = [
   {
+    title: "TIMBRE: Teaching Fake Image Detectors to Hear New Autoencoders",
+    authors: "Yuli Wang, Ping Guo, Youhua Li, Maolin Wang",
+    venue: "(Under Review)",
+    year: "2026",
+  },
+  {
+    title: "VSpeedBench: Benchmarking Speed–Quality Trade-offs in Lossy Acceleration for Video Generation",
+    authors: "Yikai Gu, Kai Wang, Nai-Xin Zhai, Qingyuan Hong, Xiao Jin, Jinglun Zhou, Maolin Wang, Youhua Li, Yongxin Ni",
+    venue: "(Under Review)",
+    year: "2026",
+  },
+  {
+    title: "ForkTutor: Continuous Self-Evolution of Tool-Using Agents through Counterfactual Teaching",
+    authors: "Shujun Wang, Xinyu Fang, Boyuan Gao, Yue Zhou, Zihao Rao, Jinglun Zhou, Jining Luan, Qinfei Li, Maolin Wang, Yongxin Ni, Youhua Li",
+    venue: "(Under Review)",
+    year: "2026",
+  },
+  {
     title: "Spherical Smoothness Priors for Separating Extremes from High-Rank Climate Fields",
     authors: "Maolin Wang, Hongyu Chen, Shuhua Yang, Youhua Li, Chaoning Zhang, Hing Cheung So, Haoxuan Li, Zhouchen Lin",
     venue: "IEEE Transactions on Pattern Analysis and Machine Intelligence (Under Review)",
@@ -155,9 +173,9 @@ export const underReview: Paper[] = [
     title:
       "EVE-Bench: Entropy-Guided Benchmarking and Evaluation for Frontier Video Generation Models",
     authors:
-      "Nai-Xin Zhai, Qingyuan Hong, Xiao Jin, Liyuan Lillian Ma, Dexu Yu, Xuanqi Lan, Sihan Chen, Junchen Fu, Youhua Li†, Yongxin Ni†",
+      "Nai-Xin Zhai, Qingyuan Hong, Xiao Jin, Liyuan Lillian Ma, Dexu Yu, Xuanqi Lan, Sihan Chen, Junchen Fu, Bo Lan, Youhua Li†, Yongxin Ni†",
     venue: "Under Review",
-    year: "2027",
+    year: "2026",
     tag: "Video Generation",
   },
   {
