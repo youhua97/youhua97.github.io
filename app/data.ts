@@ -236,15 +236,6 @@ export const underReview: Paper[] = [
   },
   {
     title:
-      "TriConList: Learning Tri-tier Contract Consistency for Full-Stack Repository Generation",
-    authors:
-      "Xianhao Lin, Xinyu Fang, Wanglong He, Yichen Wu, Hongji Li, Jiacheng Liu, Dexu Yu, Hanwen Du, Sirui Hong, Chenglin Wu, Youhua Li†, Yongxin Ni†",
-    venue: "Under Review",
-    year: "2026",
-    tag: "Code Generation",
-  },
-  {
-    title:
       "Mitigating Modality Interference for Unified Reasoning and Perception in Multimodal Large Language Models",
     authors:
       "Shuang Chen, Yimeng Ye, Dasen Dai, Yicheng Xiao, Wenxuan Huang, Kaixuan Fan, Manyuan Zhang, Yucheng Zhou, Hanwen Du, Haoxiao Wang, Ziqian Bi, Youhua Li†, Tianyu Shi†",
@@ -273,6 +264,16 @@ export const underReview: Paper[] = [
 ];
 
 export const publications: Paper[] = [
+  {
+    title:
+      "TriConList: Learning Tri-tier Contract Consistency for Full-Stack Repository Generation",
+    authors:
+      "Xinyu Fang, Xianhao Lin, Wanglong He, Yichen Wu, Hongji Li, Jiacheng Liu, Dexu Yu, Hanwen Du, Sirui Hong, Chenglin Wu, Yongxin Ni†, Youhua Li†",
+    venue: "EACL (Accepted)",
+    year: "2026",
+    tag: "Code Generation",
+  },
+
   {
     title:
       "PhysicsMind: Sim and Real Mechanics Benchmarking for Physical Reasoning and Prediction in Foundational VLMs and World Models",
