@@ -7,7 +7,7 @@ export type Paper = {
   tag?: string;
 };
 
-export const underReview: Paper[] = [
+const underReviewEntries: Paper[] = [
   {
     title: "QCT: A Calibrated Risk Interface for Fully Invested Portfolio Allocation",
     authors: "Boyi Zhang, Xinyu Fang, Ersheng Ni, Zihao Rao, Hanwen Du, Yongxin Ni, Yiqi Sun, Youhua Li",
@@ -29,7 +29,7 @@ export const underReview: Paper[] = [
   {
     title: "Spherical Smoothness Priors for Separating Extremes from High-Rank Climate Fields",
     authors: "Maolin Wang, Hongyu Chen, Shuhua Yang, Youhua Li, Chaoning Zhang, Hing Cheung So, Haoxuan Li, Zhouchen Lin",
-    venue: "IEEE Transactions on Pattern Analysis and Machine Intelligence (Under Review)",
+    venue: "(Under Review)",
     year: "2026",
   },
   {
@@ -270,6 +270,13 @@ export const underReview: Paper[] = [
     href: "https://openreview.net/forum?id=esXvdhwUQ5",
     tag: "Bayesian Optimization",
   },
+];
+
+// Keep UTD24 manuscripts first regardless of where new entries are inserted.
+// Only explicitly UTD24-tagged manuscripts belong in this leading group.
+export const underReview: Paper[] = [
+  ...underReviewEntries.filter((paper) => paper.tag === "UTD24"),
+  ...underReviewEntries.filter((paper) => paper.tag !== "UTD24"),
 ];
 
 export const publications: Paper[] = [
