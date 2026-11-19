@@ -9,6 +9,12 @@ export type Paper = {
 
 export const underReview: Paper[] = [
   {
+    title: "QCT: A Calibrated Risk Interface for Fully Invested Portfolio Allocation",
+    authors: "Boyi Zhang, Xinyu Fang, Ersheng Ni, Zihao Rao, Hanwen Du, Yongxin Ni, Yiqi Sun, Youhua Li",
+    venue: "(Under Review)",
+    year: "2026",
+  },
+  {
     title: "TIMBRE: Teaching Fake Image Detectors to Hear New Autoencoders",
     authors: "Yuli Wang, Ping Guo, Youhua Li, Maolin Wang",
     venue: "(Under Review)",
@@ -65,6 +71,13 @@ export const underReview: Paper[] = [
     year: "2026",
     href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6562298",
     tag: "Optimization Modeling",
+  },
+  {
+    title: "Deliberation-Gated MCTS: A Hybrid Reasoning Algorithm for Automated Optimization Modeling",
+    authors: "Youhua Li, Jiaxin Wang, Yiqi Sun†, Zuojun Max Shen, Houmin Yan",
+    venue: "INFORMS Journal on Computing (Under Review)",
+    year: "2026",
+    tag: "UTD24",
   },
   {
     title:
