@@ -27,12 +27,6 @@ export const underReview: Paper[] = [
     year: "2026",
   },
   {
-    title: "ForkTutor: Continuous Self-Evolution of Tool-Using Agents through Counterfactual Teaching",
-    authors: "Shujun Wang, Xinyu Fang, Boyuan Gao, Yue Zhou, Zihao Rao, Jinglun Zhou, Jining Luan, Qinfei Li, Maolin Wang, Yongxin Ni, Youhua Li",
-    venue: "(Under Review)",
-    year: "2026",
-  },
-  {
     title: "Spherical Smoothness Priors for Separating Extremes from High-Rank Climate Fields",
     authors: "Maolin Wang, Hongyu Chen, Shuhua Yang, Youhua Li, Chaoning Zhang, Hing Cheung So, Haoxuan Li, Zhouchen Lin",
     venue: "IEEE Transactions on Pattern Analysis and Machine Intelligence (Under Review)",
