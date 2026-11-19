@@ -53,7 +53,7 @@ export const underReview: Paper[] = [
     year: "2026",
     href:
       "https://www.researchgate.net/publication/411058050_LLM-Assisted_Scheduling_Policy_Design_and_Refinement_Evidence_Across_Queueing_Networks_Job-Shop_Scheduling_and_Ride-Hailing_Dispatch",
-    tag: "Operations",
+    tag: "UTD24 · Operations",
   },
   {
     title:
@@ -62,6 +62,7 @@ export const underReview: Paper[] = [
       "Youhua Li, Yiqi Sun, Chang Liu, Zuojun (Max) Shen, Houmin Yan",
     venue: "Production and Operations Management (Under Review)",
     year: "2026",
+    tag: "UTD24",
   },
   {
     title:
@@ -70,7 +71,7 @@ export const underReview: Paper[] = [
     venue: "Operations Research (Reject and Resubmit)",
     year: "2026",
     href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6562298",
-    tag: "Optimization Modeling",
+    tag: "UTD24 · Optimization Modeling",
   },
   {
     title: "Deliberation-Gated MCTS: A Hybrid Reasoning Algorithm for Automated Optimization Modeling",
