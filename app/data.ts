@@ -56,6 +56,7 @@ export const underReview: Paper[] = [
       "Youhua Li, Yiqi Sun, Chang Liu, Zuojun (Max) Shen, Houmin Yan",
     venue: "Production and Operations Management (Under Review)",
     year: "2026",
+    href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7551881",
     tag: "UTD24",
   },
   {
