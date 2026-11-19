@@ -201,3 +201,19 @@ test("applies the requested research copy and professional service updates", asy
   assert.match(html, /WSDM 2026/);
   assert.match(html, /ACM MM 2024 \/ 2025 \/ 2026/);
 });
+
+
+test("pins only UTD24 manuscripts first and hides the climate submission venue", async () => {
+  for (const file of [root, english]) {
+    const html = await readFile(file, "utf8");
+    const review = html.slice(html.indexOf("<h3>Under Review</h3>"), html.indexOf("<h3>Published / Accepted</h3>"));
+    const items = review.match(/<li class="paper-item"[\s\S]*?<\/li>/g) ?? [];
+    assert.equal(items.length, 32);
+    for (const item of items.slice(0, 4)) assert.match(item, />UTD24</);
+    for (const item of items.slice(4)) assert.doesNotMatch(item, />UTD24</);
+    const climate = items.find((item) => item.includes("Spherical Smoothness Priors"));
+    assert.ok(climate);
+    assert.match(climate, /\(Under Review\)/);
+    assert.doesNotMatch(climate, /IEEE|Pattern Analysis|TPAMI/);
+  }
+});
