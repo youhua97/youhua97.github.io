@@ -18,6 +18,7 @@ const copy = {
       ["动态", "#news"],
       ["研究", "#research"],
       ["论文", "#publications"],
+      ["创业", "#ventures"],
       ["经历", "#experience"],
     ],
     nameCn: "李佑华",
@@ -45,6 +46,19 @@ const copy = {
     papers: "papers",
     linkLabel: "Paper",
     contribution: "* Equal contribution. † Corresponding author.",
+    venturesTitle: "创业与产业经历",
+    ventures: [
+      { name: "决曦智能 · Decilix", role: "创始人", projects: [
+        "GeneQuant：AI 原生量化研究基础设施，支持智能体调用金融工具、策略开发与回测，重视防前视偏差和实验可复现性。",
+        "AI 自主投研：构建策略提出、测试与迭代闭环，开展可转债与权益策略的研究及内部产品实践。",
+        "金融 AI 工程交付：面向金融信息平台，以驻场工程（FDE）模式开展数据处理、知识检索与多智能体产品的端到端建设。",
+      ] },
+      { name: "方曦智能 · Fangxi Intelligence", role: "创始人", projects: [
+        "Eupalo 市场仿真：模拟不同用户对产品、定价与营销方案的反应，辅助企业在真实消费者调研前筛选和验证决策假设。",
+        "GoEO 品牌 AI 增长：监测品牌在 AI 问答中的呈现、描述准确性与引用来源，支持品牌知识维护和企业自有 GEO 系统建设。",
+        "共享数据与证据底座：整合用户画像、公开行业数据、AI 平台观测与企业授权数据，支持市场洞察和品牌决策。",
+      ] },
+    ],
     experienceTitle: "研究经历",
     educationTitle: "教育背景",
     advisorPrefix: "导师：",
@@ -53,7 +67,7 @@ const copy = {
         date: "2024.09 — 至今",
         title: "博士 · 金融决策分析与运筹学",
         place: "香港城市大学",
-        detail: "导师：Prof. Houmin Yan（香港城市大学商学院前院长、讲座教授）与 Prof. Zuojun (Max) Shen（香港大学副校长、中国工程院院士）。研究方向：AI 驱动的决策、运筹优化、金融科技与大语言模型。",
+        detail: "指导老师：严厚明（Houmin Yan）教授，香港城市大学商学院前院长；合作导师：申作军（Zuojun Max Shen）教授。研究方向：AI 驱动的决策、运筹优化、金融科技与大语言模型。",
       },
       {
         date: "2021.09 — 2024.07",
@@ -73,7 +87,7 @@ const copy = {
         date: "2024.09 — 至今",
         title: "Researcher & Ph.D. Student",
         place: "AIFTHK / 香港城市大学",
-        advisors: "Prof. Houmin Yan；Prof. Zuojun (Max) Shen",
+        advisors: "严厚明（Houmin Yan）教授；合作导师：申作军（Zuojun Max Shen）教授",
         detail: "供应链金融建模、LLM 增强的决策系统、电商 GEO 框架与金融量化研究。",
       },
       {
@@ -122,7 +136,7 @@ const copy = {
       ["Workshops", "DCAI Workshop at WWW 2024"],
     ],
     contact: "欢迎就相关研究与合作通过邮件联系。",
-    updated: "Last updated: October 2026",
+    updated: "Last updated: November 2026",
   },
   en: {
     pageLabel: "Academic homepage of Youhua Li",
@@ -133,6 +147,7 @@ const copy = {
       ["News", "#news"],
       ["Research", "#research"],
       ["Publications", "#publications"],
+      ["Ventures", "#ventures"],
       ["Experience", "#experience"],
     ],
     nameCn: "李佑华",
@@ -160,6 +175,19 @@ const copy = {
     papers: "papers",
     linkLabel: "Paper",
     contribution: "* Equal contribution. † Corresponding author.",
+    venturesTitle: "Entrepreneurship & Industry Experience",
+    ventures: [
+      { name: "Decilix · 决曦智能", role: "Founder", projects: [
+        "GeneQuant: AI-native quantitative research infrastructure for agent-based financial tool use, strategy development, and backtesting, with safeguards against look-ahead bias and an emphasis on reproducibility.",
+        "Autonomous AI research: iterative strategy generation, testing, and refinement, with convertible-bond and equity research and internal product development.",
+        "Financial AI delivery: forward-deployed engineering (FDE) for financial information platforms, spanning data processing, knowledge retrieval, and multi-agent products.",
+      ] },
+      { name: "Fangxi Intelligence · 方曦智能", role: "Founder", projects: [
+        "Eupalo market simulation: models user responses to product concepts, pricing, and marketing to help teams prioritize hypotheses for real consumer research.",
+        "GoEO brand AI growth: monitors brand representation, factual accuracy, and citations in AI answers, supporting brand knowledge maintenance and enterprise-owned GEO systems.",
+        "Shared data and evidence infrastructure: integrates user profiles, public industry data, AI-platform observations, and authorized enterprise data for market insight and brand decisions.",
+      ] },
+    ],
     experienceTitle: "Research Experience",
     educationTitle: "Education",
     advisorPrefix: "Advisor(s): ",
@@ -168,7 +196,7 @@ const copy = {
         date: "Sep 2024 — Present",
         title: "Ph.D. in Financial Decision Analytics & Operations",
         place: "City University of Hong Kong",
-        detail: "Advisors: Prof. Houmin Yan (Former Dean, College of Business, CityU; Chair Professor) and Prof. Zuojun (Max) Shen (Vice-President, HKU; Member of the Chinese Academy of Engineering). Research in AI-driven decision-making, operations optimization, FinTech, and large language models.",
+        detail: "Ph.D. supervisor: Prof. Houmin Yan, former Dean of the College of Business, CityUHK. Research mentor (collaboration): Prof. Zuojun (Max) Shen. Research in AI-driven decision-making, operations optimization, FinTech, and large language models.",
       },
       {
         date: "Sep 2021 — Jul 2024",
@@ -188,7 +216,7 @@ const copy = {
         date: "Sep 2024 — Present",
         title: "Researcher & Ph.D. Student",
         place: "AIFTHK / City University of Hong Kong",
-        advisors: "Prof. Houmin Yan; Prof. Zuojun (Max) Shen",
+        advisors: "Prof. Houmin Yan; Research mentor (collaboration): Prof. Zuojun (Max) Shen",
         detail: "Supply-chain finance modeling, LLM-enhanced decision systems, e-commerce GEO frameworks, and quantitative finance.",
       },
       {
@@ -237,7 +265,7 @@ const copy = {
       ["Workshops", "DCAI Workshop at WWW 2024"],
     ],
     contact: "I welcome conversations about related research and collaboration.",
-    updated: "Last updated: October 2026",
+    updated: "Last updated: November 2026",
   },
 };
 
@@ -413,6 +441,19 @@ export function AcademicHome({ locale }: { locale: Locale }) {
             })}
           </section>
           <p className="contribution-note">{t.contribution}</p>
+        </section>
+
+        <section className="content-section" id="ventures">
+          <SectionHeading icon="💼" title={t.venturesTitle} />
+          <div className="resume-block">
+            {t.ventures.map((venture) => (
+              <article key={venture.name}>
+                <h3>{venture.name}</h3>
+                <p className="timeline-place">{venture.role}</p>
+                <ul>{venture.projects.map((project) => <li key={project}>{project}</li>)}</ul>
+              </article>
+            ))}
+          </div>
         </section>
 
         <section className="content-section" id="experience">
