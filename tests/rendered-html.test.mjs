@@ -186,8 +186,16 @@ test("uses a non-photographic avatar and keeps all paper metadata in English", a
   );
   assert.doesNotMatch(visibleProfile, /香港城市大学商学院前院长、讲座教授/);
   assert.doesNotMatch(visibleProfile, /香港大学副校长、中国工程院院士/);
-  assert.match(html, /香港城市大学商学院前院长、讲座教授/);
-  assert.match(html, /香港大学副校长、中国工程院院士/);
+  assert.match(html, /香港城市大学商学院前院长；合作导师：申作军/);
+  assert.doesNotMatch(html, /香港大学副校长、中国工程院院士/);
+  for (const file of [root, english]) {
+    const page = await readFile(file, "utf8");
+    assert.match(page, /id="ventures"/);
+    for (const name of ["GeneQuant", "Eupalo", "GoEO", "Decilix"]) assert.ok(page.includes(name));
+  }
+  const en = await readFile(english, "utf8");
+  assert.match(en, /Ph.D. supervisor: Prof. Houmin Yan/);
+  assert.match(en, /Research mentor \(collaboration\): Prof. Zuojun/);
 });
 
 test("applies the requested research copy and professional service updates", async () => {
