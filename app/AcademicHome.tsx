@@ -67,7 +67,7 @@ const copy = {
         date: "2024.09 — 至今",
         title: "博士 · 金融决策分析与运筹学",
         place: "香港城市大学",
-        detail: "指导老师：严厚明（Houmin Yan）教授，香港城市大学商学院前院长；合作导师：申作军（Zuojun Max Shen）教授。研究方向：AI 驱动的决策、运筹优化、金融科技与大语言模型。",
+        detail: "指导老师：严厚明（Houmin Yan）教授，香港城市大学商学院前院长；合作导师：申作军（Zuojun Max Shen）教授（中国工程院院士、香港大学副校长）。研究方向：AI 驱动的决策、运筹优化、金融科技与大语言模型。",
       },
       {
         date: "2021.09 — 2024.07",
@@ -87,7 +87,7 @@ const copy = {
         date: "2024.09 — 至今",
         title: "Researcher & Ph.D. Student",
         place: "AIFTHK / 香港城市大学",
-        advisors: "严厚明（Houmin Yan）教授；合作导师：申作军（Zuojun Max Shen）教授",
+        advisors: "严厚明（Houmin Yan）教授；合作导师：申作军（Zuojun Max Shen）教授（中国工程院院士、香港大学副校长）",
         detail: "供应链金融建模、LLM 增强的决策系统、电商 GEO 框架与金融量化研究。",
       },
       {
@@ -196,7 +196,7 @@ const copy = {
         date: "Sep 2024 — Present",
         title: "Ph.D. in Financial Decision Analytics & Operations",
         place: "City University of Hong Kong",
-        detail: "Ph.D. supervisor: Prof. Houmin Yan, former Dean of the College of Business, CityUHK. Research mentor (collaboration): Prof. Zuojun (Max) Shen. Research in AI-driven decision-making, operations optimization, FinTech, and large language models.",
+        detail: "Ph.D. supervisor: Prof. Houmin Yan, former Dean of the College of Business, CityUHK. Research mentor (collaboration): Prof. Zuojun (Max) Shen (Member of the Chinese Academy of Engineering; Vice-President, The University of Hong Kong). Research in AI-driven decision-making, operations optimization, FinTech, and large language models.",
       },
       {
         date: "Sep 2021 — Jul 2024",
@@ -216,7 +216,7 @@ const copy = {
         date: "Sep 2024 — Present",
         title: "Researcher & Ph.D. Student",
         place: "AIFTHK / City University of Hong Kong",
-        advisors: "Prof. Houmin Yan; Research mentor (collaboration): Prof. Zuojun (Max) Shen",
+        advisors: "Prof. Houmin Yan; Research mentor (collaboration): Prof. Zuojun (Max) Shen (Member of the Chinese Academy of Engineering; Vice-President, The University of Hong Kong)",
         detail: "Supply-chain finance modeling, LLM-enhanced decision systems, e-commerce GEO frameworks, and quantitative finance.",
       },
       {
